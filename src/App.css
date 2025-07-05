@@ -33,17 +33,23 @@ body::before {
 
 .navbar .navbar-wrapper {
   display: flex;
-  gap: 60px;
   background-color: white;
   padding: 10px 40px;
   border-radius: 8px;
   border: 2px solid rgb(170, 170, 170);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+  gap: 30px;
 }
 
 .navbar .navbar-wrapper span{
   color: rgb(60, 60, 60);
   font-size: 1.2rem;
+}
+
+.navbar .navbar-wrapper .link-container{
+  display: flex;
+  gap: 60px;
+  align-items: center;
 }
 
 .hero{
@@ -189,6 +195,34 @@ body::before {
   display: inline-block;
 }
 
+.navbar .navbar-wrapper .social-container{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.navbar .navbar-wrapper .social-container .social{
+  width: 1.7rem;
+  transition: .4s;
+}
+
+.navbar .navbar-wrapper .social-container a{
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-wrapper .social-container .social:hover{
+  cursor: pointer;
+  transform: translateY(-4px) scale(110%);
+}
+
+.divider {
+  width: 2px;
+  height: 100%;
+  background-color: #a5a5a5; /* same color as your border */
+  opacity: 0.7;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotate(-2deg);
@@ -232,11 +266,10 @@ body::before {
   }
 
   .navbar .navbar-wrapper {
-    gap: 24px;
-    padding: 8px 16px;
-    font-size: 1rem;
-    width: 70%;
-    justify-content: space-between;
+    gap: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
   }
 
   .hero {
@@ -297,9 +330,14 @@ body::before {
     left: 10%;
   }
 
-  .navbar .navbar-wrapper .nav-text {
+  .navbar .navbar-wrapper .nav-text,
+  .navbar .navbar-wrapper .social,
+  .navbar .navbar-wrapper .social-container,
+  .navbar .navbar-wrapper .divider,
+  .navbar .navbar-wrapper .link-container{
     display: none;
   }
+
   .navbar .navbar-wrapper .nav-icon {
     display: inline-block;
   }
