@@ -178,6 +178,16 @@ body::before {
   transform: translateY(-2px) scale(102%);
 }
 
+.navbar .navbar-wrapper .nav-icon {
+  display: none;
+  width: 28px;
+  height: 28px;
+}
+
+.navbar .navbar-wrapper .nav-text {
+  display: inline-block;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0) rotate(-2deg);
@@ -224,6 +234,8 @@ body::before {
     gap: 24px;
     padding: 8px 16px;
     font-size: 1rem;
+    width: 70%;
+    justify-content: space-between;
   }
 
   .hero {
@@ -282,5 +294,12 @@ body::before {
 
   .php{
     left: 10%;
+  }
+
+  .navbar .navbar-wrapper .nav-text {
+    display: none;
+  }
+  .navbar .navbar-wrapper .nav-icon {
+    display: inline-block;
   }
 }
