@@ -120,7 +120,7 @@ body::before {
 
 .hero .right .absolute{
   position: absolute;
-  animation: float 6s ease-in-out infinite, fade-in 0.6s ease-in 1;
+  animation: float 6s ease-in-out infinite, fade-in 0.8s ease-in 1;
 }
 
 .hero .right .absolute.fullstackbanner{
@@ -131,23 +131,40 @@ body::before {
 }
 
 .hero .right .absolute.aibanner{
-  width: 250px;
+  width: 180px;
   border-radius: 8px;
   right: 10%;
-  top: 30%;
+  top: 20%;
 }
 
-.hero .right .absolute.js{
-  width: 100px;
-  bottom: 20%;
-  right: 20%;
+.tech-icons.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 
-.hero .right .absolute.py{
-  width: 100px;
-  top: 50%;
-  left: 15%;
+.tech-icons.fade-out {
+  opacity: 0;
+  transition: opacity 0.4s;
 }
+
+.js, .py, .node, .express, .mongodb, .mysql, .react, .redux, .git, .figma, .php, .html, .css {
+  width: 120px;
+  height: 120px;
+}
+
+.js { top: 10%; left: 20%; }
+.py { top: 40%; left: 65%; }
+.node { top: 10%; left: 65%; }
+.express { top: 40%; left: 25%; }
+.mongodb { top: 55%; left: 65%; }
+.mysql { top: 80%; left: 70%; }
+.react { top: 70%; left: 15%; }
+.redux { top: 80%; left: 55%; }
+.git { top: 20%; left: 20%; }
+.figma { top: 35%; left: 65%; }
+.php { top: 55%; left: 25%; }
+.html { top: 45%; left: 10%; }
+.css { top: 75%; left: 70%; }
 
 .hero .right .me{
   width: 60%;
@@ -250,21 +267,20 @@ body::before {
     width: 120px;
     left: unset;
     right: 5%;
-    top: 30%;
+    top: 10%;
     bottom: unset;
   }
 
-  .hero .right .absolute.js{
-    width: 60px;
-    right: 10%;
-    top: 10%;
+  .js, .py, .node, .express, .mongodb, .mysql, .react, .redux, .git, .figma, .php, .html, .css {
+    width: 80px;
+    height: 80px;
   }
 
-  .hero .right .absolute.py {
-    width: 60px;
+  .express{
     left: 10%;
-    right: unset;
-    top: unset;
-    bottom: 20%;
+  }
+
+  .php{
+    left: 10%;
   }
 }
