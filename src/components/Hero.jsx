@@ -77,8 +77,12 @@ const Hero = () => {
                 <div className="right">
                     <img src={mepng} alt="" className='me' />
                     <div className={`tech-icons ${isFading ? 'fade-out' : 'fade-in'}`}>
-                        {techSets[setIndex].map((icon, i) => (
-                            <img key={i} src={icon.src} className={icon.className} />
+                        {techSets[setIndex].map((icon) => (
+                            <img
+                                key={icon.src + icon.className}
+                                src={icon.src}
+                                className={icon.className}
+                            />
                         ))}
                     </div>
                 </div>
