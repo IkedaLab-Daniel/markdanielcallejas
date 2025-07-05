@@ -95,7 +95,7 @@ const Hero = () => {
         return () => clearTimeout(timer)
     }, [setIndex, imagesLoaded])
 
-    if (imagesLoaded) {
+    if (!imagesLoaded) {
         return (
             <div style={{
                 minHeight: '400px',
