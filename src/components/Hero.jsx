@@ -70,6 +70,7 @@ const Hero = () => {
     const [setIndex, setSetIndex] = useState(0)
     const [isFading, setIsFading] = useState(false)
     const [imagesLoaded, setImagesLoaded] = useState(false)
+    const [loadedCount, setLoadedCount] = useState(0)
 
     useEffect(() => {
         let loaded = 0
@@ -78,6 +79,7 @@ const Hero = () => {
             img.src = src
             img.onload = img.onerror = () => {
                 loaded += 1
+                setLoadedCount(loaded)
                 if (loaded === allImages.length) setImagesLoaded(true)
             }
         })
@@ -96,6 +98,7 @@ const Hero = () => {
     }, [setIndex, imagesLoaded])
 
     if (!imagesLoaded) {
+        const percent = Math.round((loadedCount / allImages.length) * 100)
         return (
             <div style={{
                 minHeight: '400px',
@@ -105,7 +108,7 @@ const Hero = () => {
                 flexDirection: 'column'
             }}>
                 <img src={catloader} alt="Loading..." style={{ width: 120, height: 120, marginBottom: 16 }} />
-                <span style={{ color: '#555', fontSize: '1.1rem' }}>Loading...</span>
+                <span style={{ color: '#555', fontSize: '1.1rem', marginBottom: 8 }}>Loading... {percent}%</span>
             </div>
         )
     }

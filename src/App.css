@@ -182,6 +182,7 @@ body::before {
   display: none;
   width: 28px;
   height: 28px;
+  opacity: .7;
 }
 
 .navbar .navbar-wrapper .nav-text {
