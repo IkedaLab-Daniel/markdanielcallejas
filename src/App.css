@@ -170,7 +170,7 @@ body::before {
   width: 60%;
   transform: rotate(-3deg) scale(0.96);
   animation: pinned-pop 1s cubic-bezier(.68,-0.55,.27,1.55) 1;
-  transition: 1s;
+  transition: .8s;
 }
 
 .hero .right .me:hover{
