@@ -363,12 +363,12 @@ body::before {
 @media (max-width: 768px) {
   .navbar {
     top: unset;
-    bottom: 10px;
+    bottom: 20px;
   }
 
   .navbar .navbar-wrapper {
     gap: 30px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     display: flex;
     justify-content: center;
   }
@@ -376,10 +376,12 @@ body::before {
   .hero {
     margin-top: 0px;
     flex-direction: column-reverse;
+    padding: 0px 10px;
   }
 
   .hero .left,
   .hero .right {
+    margin-top: 0px;
     width: 100%;
     padding: 24px 12px;
   }
@@ -431,6 +433,12 @@ body::before {
     left: 10%;
   }
 
+  .hero .left .button-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
   .navbar .navbar-wrapper .nav-text,
   .navbar .navbar-wrapper .social,
   .navbar .navbar-wrapper .social-container,
@@ -446,5 +454,6 @@ body::before {
   .about-wrapper {
     display: flex;
     flex-direction: column-reverse;
+    margin-top: 0px;
   }
 }

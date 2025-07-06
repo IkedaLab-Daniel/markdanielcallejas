@@ -116,7 +116,7 @@ const Hero = () => {
     return(
         <>
             <div className="hero">
-                <div className="left">
+                <div className="left" data-aos="fade-right">
                     <h1 className="name">Night is so peaceful guys</h1>
                     <h4>see you'll tommorow</h4>
                     <p>join yeolpunta group??????????</p>
