@@ -391,6 +391,16 @@ body::before {
   height: 40px;
 }
 
+.category-heading {
+  text-align: left;
+  margin: 40px 0 20px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111827;
+  border-left: 4px solid #3b82f6;
+  padding-left: 12px;
+}
+
 .tech-card ul {
   list-style: none;
   padding: 0;
@@ -427,6 +437,82 @@ body::before {
 .tech-card img {
   width: 30px;
   height: 30px;
+}
+
+/* Credentials.jsx */
+.app {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-head {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.certificates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.certificate-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.certificate-card:hover {
+  transform: scale(1.03);
+}
+.certificate-img {
+  width: 100%;
+  border-radius: 12px;
+}
+.issuer {
+  color: #666;
+  margin: 0.5rem 0 0.75rem;
+}
+.tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.tech-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Carousel */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 1rem 0;
+}
+.carousel-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+.badge {
+  height: 80px;
+  margin: 0 1rem;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes float {

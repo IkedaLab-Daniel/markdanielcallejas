@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import TechStack from './components/TechStack'
+import Credentials from './components/Credentials'
 import './App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -22,6 +23,7 @@ function App() {
       <Hero />
       <About />
       <TechStack />
+      <Credentials />
     </>
   )
 }
