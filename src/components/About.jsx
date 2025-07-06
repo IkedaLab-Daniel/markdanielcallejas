@@ -25,7 +25,12 @@ const About = () => {
         <div className="about-wrapper">
             <div className="about-left">
                 {stats.map((stat, index) => (
-                <div className="stat-card" key={index}>
+                <div 
+                  className="stat-card" 
+                  key={index}
+                  data-aos="flip-down"
+                  data-aos-delay={index * 100}
+                >
                     <div className="stat-icon">{stat.icon}</div>
                         <div className="stat-info">
                             <span className="stat-number">{stat.number}</span>
@@ -36,12 +41,11 @@ const About = () => {
             ))}
         </div>
 
-        <div className="about-right">
+        <div className="about-right" data-aos="fade-up">
             <h2 className="about-heading">About</h2>
             <p className="about-quote"><em>“Spend nights improving...”</em></p>
             <p className="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium, beatae sed ullam ipsam distinctio consequuntur quos autem dolor accusantium corporis quibusdam alias eius sunt est fugit tenetur ab laboriosam.</p>
             <p className="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium, beatae sed ullam ipsam distinctio consequuntur quos autem dolor accusantium corporis quibusdam alias eius sunt est fugit tenetur ab laboriosam.</p>
-            <p className="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium, beatae sed ullam ipsam distinctio consequuntur quos autem dolor accusantium corporis quibusdam alias eius sunt est fugit tenetur ab laboriosam.</p> 
         </div>
     </div>
   );
