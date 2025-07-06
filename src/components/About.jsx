@@ -1,6 +1,7 @@
 import certificategif from '../assets/certificate.gif'
 import badgegif from '../assets/badge.gif'
 import projectsgif from '../assets/projects.gif'
+import GitHubCalendar from 'react-github-calendar';
 
 const stats = [
   {
@@ -45,7 +46,16 @@ const About = () => {
             <h2 className="about-heading">About</h2>
             <p className="about-quote"><em>“Spend nights improving...”</em></p>
             <p className="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium, beatae sed ullam ipsam distinctio consequuntur quos autem dolor accusantium corporis quibusdam alias eius sunt est fugit tenetur ab laboriosam.</p>
-            <p className="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium, beatae sed ullam ipsam distinctio consequuntur quos autem dolor accusantium corporis quibusdam alias eius sunt est fugit tenetur ab laboriosam.</p>
+            <h3>GitHub Contribution Chart:</h3>
+            <div className='calendar-wrapper'>
+                <GitHubCalendar
+                  username="Ikedalab-Daniel"
+                  colorScheme="light"
+                  theme={{
+                    light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39']
+                  }}
+                />
+            </div>
         </div>
     </div>
   );

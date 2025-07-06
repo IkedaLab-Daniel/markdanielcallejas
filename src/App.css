@@ -324,6 +324,14 @@ body::before {
   line-height: 1.6;
 }
 
+.about-right h3{
+  margin-top: 20px;
+}
+
+.about-right .calendar-wrapper{
+  max-width: 100%;
+}
+
 /* tech stack */
 .tech-stack {
   max-width: 1440px;
@@ -557,5 +565,14 @@ body::before {
   .tech-stack{
     width: 90%;
     gap: 0px;
+  }
+
+  .about-right{
+    max-width: 90vw;
+  }
+
+  .about-right .calendar-wrapper{
+    max-width: 100%;
+    overflow-x: scroll;
   }
 }
