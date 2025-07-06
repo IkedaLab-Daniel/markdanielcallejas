@@ -388,6 +388,7 @@ body::before {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
   margin: 20px auto;
@@ -401,11 +402,23 @@ body::before {
   font-size: 0.95rem;
   color: #1f2937;
   font-weight: 500;
+  gap: 5px;
+  position: relative;
+}
+
+.tech-card li .primary{
+  background-color: rgb(233, 217, 0);
+  color: rgb(48, 48, 48);
+  font-size: .6rem;
+  padding: 0px 8px;
+  border-radius: 10px;
+  position: absolute;
+  top: -20px;
 }
 
 .tech-card img {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
 }
 
 @keyframes float {

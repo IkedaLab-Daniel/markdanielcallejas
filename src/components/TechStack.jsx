@@ -32,7 +32,10 @@ const TechStack = () => {
                             <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" /> React
                         </li>
                         <li>
-                            <img src="https://cdn.simpleicons.org/redux/764ABC" alt="Redux" /> Redux
+                            <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootrap" /> Bootstrap
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/redux/764ABC" alt="Redux" />Redux
                         </li>
                     </ul>
                 </div>
@@ -55,6 +58,9 @@ const TechStack = () => {
                         <li>
                             <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" /> Django
                         </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" />PHP
+                        </li>
                     </ul>
                 </div>
 
@@ -72,6 +78,9 @@ const TechStack = () => {
                         </li>
                         <li>
                             <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" /> MySQL
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="MySQL" /> SQLite
                         </li>
                     </ul>
                 </div>
@@ -92,7 +101,25 @@ const TechStack = () => {
                             <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" /> GitHub
                         </li>
                         <li>
+                            <img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" /> Figma
+                        </li>
+                        <li>
                             <img src="https://cdn.simpleicons.org/vite/646CFF" alt="Vite" /> Vite
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/webpack/8DD6F9" alt="Webpack" /> Webpack
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/jsonwebtokens/000000" alt="jsonwebtokens" /> JWT
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/insomnia/4000BF" alt="insomnia" />Insomnia
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/netlify/00C7B7" alt="Netlify" /> Netlify
+                        </li>
+                        <li>
+                            <img src="https://cdn.simpleicons.org/render/000000" alt="Render" /> Render
                         </li>
                     </ul>
                 </div>
