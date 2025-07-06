@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import samplecert from '../assets/samplecert.jpeg'
+import samplebadge from '../assets/samplebadge.png'
 import './credential.css';
 import { ExternalLink } from 'lucide-react';
 
@@ -9,7 +11,7 @@ const Credentials = () => {
       title: "Certificate Certificate",
       subtitle: "Coursera",
       description: "Desription",
-      image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0RLDLWA9XXRO/CERTIFICATE_LANDING_PAGE~0RLDLWA9XXRO.jpeg",
+      image: `${samplecert}`,
       verificationUrl: "https://credly.com/badges/example-1",
       technologies: ["React", "Django", "MySQL"]
     },
@@ -18,7 +20,7 @@ const Credentials = () => {
       title: "Certificate Certificate",
       subtitle: "Coursera",
       description: "Desription Desription Desription",
-      image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0RLDLWA9XXRO/CERTIFICATE_LANDING_PAGE~0RLDLWA9XXRO.jpeg",
+      image: `${samplecert}`,
       verificationUrl: "https://credly.com/badges/example-2",
       technologies: ["React", "Django", "MySQL"]
     },
@@ -27,31 +29,27 @@ const Credentials = () => {
       title: "Certificate Certificate",
       subtitle: "Coursera",
       description: "Desription Desription Desription",
-      image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~0RLDLWA9XXRO/CERTIFICATE_LANDING_PAGE~0RLDLWA9XXRO.jpeg",
+      image: `${samplecert}`,
       verificationUrl: "https://credly.com/badges/example-3",
       technologies: ["React", "Django", "MySQL"]
     }
   ];
 
   const allBadges = [
-    { id: 1, name: "React", icon: "⚛️" },
-    { id: 2, name: "HTML5", icon: "🌐" },
-    { id: 3, name: "CSS3", icon: "🎨" },
-    { id: 4, name: "JavaScript", icon: "📜" },
-    { id: 5, name: "RxJS", icon: "🔄" },
-    { id: 6, name: "Redux", icon: "🔄" },
-    { id: 7, name: "Bootstrap", icon: "🅱️" },
-    { id: 8, name: "Node.js", icon: "🚀" },
-    { id: 9, name: "Express", icon: "⚡" },
-    { id: 10, name: "Django", icon: "🐍" },
-    { id: 11, name: "PHP", icon: "🐘" },
-    { id: 12, name: "MongoDB", icon: "🍃" },
-    { id: 13, name: "MySQL", icon: "🐬" },
-    { id: 14, name: "SQLite", icon: "💾" },
-    { id: 15, name: "Git", icon: "📝" },
-    { id: 16, name: "GitHub", icon: "🐙" },
-    { id: 17, name: "Figma", icon: "🎯" },
-    { id: 18, name: "Vite", icon: "⚡" }
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
+    { id: 1, name: "badge1", icon: `${samplebadge}` },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -79,6 +77,7 @@ const Credentials = () => {
                   <img src={cert.image} alt={cert.title} />
                   <a href={cert.verificationUrl} target="_blank" rel="noopener noreferrer" className="cert-verify">
                     <ExternalLink size={16} />
+                    <span>View</span>
                   </a>
                 </div>
                 <div className="cert-info">
@@ -108,8 +107,10 @@ const Credentials = () => {
               >
                 {[...allBadges, ...allBadges, ...allBadges].map((badge, index) => (
                   <div className="badge" key={`${badge.id}-${index}`}>
-                    <div className="icon">{badge.icon}</div>
-                    <span>{badge.name}</span>
+                    <div className="icon">
+                        <img src={badge.icon} alt="" />
+                    </div>
+                    {/* <span>{badge.name}</span> */}
                   </div>
                 ))}
               </div>
