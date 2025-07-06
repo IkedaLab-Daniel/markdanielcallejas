@@ -6,8 +6,8 @@ const TechStack = () => {
 
     return(
         <section className="tech-stack">
-            <h2>Tech Stack</h2>
-            <p className="subtitle">Technologies I use across the full stack.</p>
+            <h2 data-aos="fade-up">Tech Stack</h2>
+            <p className="subtitle" data-aos="fade-up">Technologies I use across the full stack.</p>
             <div className="card-grid">
                 <div 
                     className="tech-card"
@@ -18,23 +18,23 @@ const TechStack = () => {
                     </div>
                     
                     <ul>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML" />
                             <span className="tech-name">HTML</span>
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS" /> CSS
                         </li>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" /> JavaScript
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" /> React
                         </li>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootrap" /> Bootstrap
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/redux/764ABC" alt="Redux" />Redux
                         </li>
                     </ul>
@@ -49,16 +49,16 @@ const TechStack = () => {
                         <h3>Backend</h3>
                     </div>
                     <ul>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/node.js/339933" alt="Node.js" /> Node.js
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/express/000000" alt="Express" /> Express
                         </li>   
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" /> Django
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" />PHP
                         </li>
                     </ul>
@@ -73,13 +73,13 @@ const TechStack = () => {
                         <h3>Database</h3>
                     </div>
                     <ul>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" /> MongoDB
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" /> MySQL
                         </li>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="MySQL" /> SQLite
                         </li>
                     </ul>
@@ -94,31 +94,31 @@ const TechStack = () => {
                         <h3>Tools & Others</h3>
                     </div>
                     <ul>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" /> Git
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" /> GitHub
                         </li>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma" /> Figma
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/vite/646CFF" alt="Vite" /> Vite
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/webpack/8DD6F9" alt="Webpack" /> Webpack
                         </li>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/jsonwebtokens/000000" alt="jsonwebtokens" /> JWT
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/insomnia/4000BF" alt="insomnia" />Insomnia
                         </li>
-                        <li>
+                        <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/netlify/00C7B7" alt="Netlify" /> Netlify
                         </li>
-                        <li>
+                        <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/render/000000" alt="Render" /> Render
                         </li>
                     </ul>

@@ -88,14 +88,14 @@ const Credentials = () => {
     <section className="credentials-section">
       <div className="container">
         <div className="card">
-          <div className="section-header">
-            <h2>Section Section</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium odit non ea culpa dolorem, possimus ad voluptate excepturi odio distinctio unde esse, blanditiis, fugiat nihil exercitationem nulla accusamus quidem.</p>
+          <div className="section-header" data-aos="fade-up">
+            <h2>Credentials</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium odit non ea culpa dolorem, possimus ad voluptate excepturi odio distinctio unde esse.</p>
           </div>
 
           <div className="cert-grid">
             {featuredCertificates.map(cert => (
-              <div className="cert-card" key={cert.id}>
+              <div className="cert-card" key={cert.id} data-aos="fade-up">
                 <div className="cert-img-wrapper">
                   <img src={cert.image} alt={cert.title} />
                   <a href={cert.verificationUrl} target="_blank" rel="noopener noreferrer" className="cert-verify">
@@ -117,7 +117,7 @@ const Credentials = () => {
             ))}
           </div>
 
-          <div className="skills-section">
+          <div className="skills-section" data-aos="fade-up">
             <div className="carousel">
               <div className="carousel-track">
                 {[...allBadges, ...allBadges].map((badge, index) => (
