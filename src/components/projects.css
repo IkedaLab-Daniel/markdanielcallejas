@@ -34,7 +34,6 @@
 .gallery-item img {
   width: 100%;
   height: auto;
-  object-fit: cover;
   border-radius: 1rem;
 }
 
@@ -86,26 +85,53 @@
 }
 
 .tag {
-  background: #f0f0f0;
+  background: #000000;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   font-size: 0.75rem;
+  color: white;
+}
+
+.project-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-links .code-btn{
+    color: white;
+    background-color: #000000;
+}
+
+.project-links .live-demo-btn{
+    color: black;
 }
 
 .project-links a {
   margin-right: 1rem;
-  color: #0066ff;
   text-decoration: none;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  width: 100%;
+  border-radius: 8px;
+  padding: 7px 0;
+}
+
+.project-links a img{
+    width: 2rem;
+    margin: 0;
 }
 
 .close-btn {
-  margin-top: 1rem;
-  background: #f3f3f3;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
+    border: 0px solid black;
+    background-color: #7c7c7c00;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 @keyframes fadeIn {

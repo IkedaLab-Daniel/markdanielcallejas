@@ -122,7 +122,7 @@ const Hero = () => {
                     <p>join yeolpunta group??????????</p>
                     <div className="button-container">
                         <button className='contact'>Contact</button>
-                        <button className='projects'>Projects</button>
+                        <a href="#projects"><button className='projects'>Projects</button></a>
                     </div>
                 </div>
 
