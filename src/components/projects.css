@@ -1,0 +1,114 @@
+.projects-gallery {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.projects-gallery h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  color: #6c6c6c;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
+  position: relative;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+}
+
+.project-links a {
+  margin-right: 1rem;
+  color: #0066ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.close-btn {
+  margin-top: 1rem;
+  background: #f3f3f3;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

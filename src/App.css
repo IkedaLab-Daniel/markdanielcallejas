@@ -338,6 +338,7 @@ body::before {
   margin: 40px auto;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
+  padding: 1rem;
 }
 
 .tech-stack h2 {
@@ -451,7 +452,7 @@ body::before {
 .app {
   text-align: center;
   padding: 2rem 1rem;
-  max-width: 1200px;
+  max-width: 1440px;
   margin: auto;
 }
 
@@ -673,9 +674,10 @@ body::before {
     flex-direction: column-reverse;
     margin-top: 0px;
   }
-
+/* 
+/ TODO: add vertical margin  
+ */
   .tech-stack{
-    width: 90%;
     gap: 0px;
   }
 
