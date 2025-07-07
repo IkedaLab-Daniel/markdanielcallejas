@@ -94,19 +94,25 @@ body::before {
 }
 
 .hero .left .button-container button.contact {
-  padding: 12px 32px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  border: none;
-  background: black;
-  color: #fff;
-  box-shadow: 0 2px 12px rgba(79, 140, 255, 0.08);
-  transition:.4s;
-  cursor: pointer;
+    width: 100%;
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    background: black;
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(79, 140, 255, 0.08);
+    transition:.4s;
+    cursor: pointer;
+}
+
+.hero .left .button-container a{
+  width: 100%;
 }
 
 .hero .left .button-container button.projects {
+  width: 100%;
   padding: 12px 32px;
   font-size: 1.1rem;
   font-weight: 600;

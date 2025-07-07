@@ -121,8 +121,12 @@ const Hero = () => {
                     <h4>see you'll tommorow</h4>
                     <p>join yeolpunta group??????????</p>
                     <div className="button-container">
-                        <button className='contact'>Contact</button>
-                        <a href="#projects"><button className='projects'>Projects</button></a>
+                        <a href="#contact">
+                            <button className='contact'>Contact</button>
+                        </a>
+                        <a href="#projects">
+                            <button className='projects'>Projects</button>
+                        </a>
                     </div>
                 </div>
 
