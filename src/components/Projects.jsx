@@ -1,41 +1,46 @@
 import { useState } from 'react';
-import { CircleX } from 'lucide-react'
+import { CircleX, Maximize2 } from 'lucide-react'
 import './projects.css';
 
 // > images
+import livesvg from '../assets/live.svg'
+import repositorysvg from '../assets/repository.svg'
 import explainora from '../assets/explainora.png'
+import phpets from '../assets/phpets.png'
+import cvdrive from '../assets/cvdrive.png'
+import freedomnotes from '../assets/freedomnotes.png'
 
 const projectList = [
   {
     title: "Explainora AI",
-    description: "A full-stack AI-powered web app that helps users understand and get explanations for code snippets. It allows users to input code and receive intelligent explanations using integrated AI models. Ideal for developers, students, and anyone learning to code.",
+    description: "A full-stack AI-powered web app that helps users understand and get explanations for code snippets. It allows users to input code and receive intelligent explanations using integrated AI models.",
     tech: ["React", "Node", "Express", "CSS"],
     image: `${explainora}`,
     github: "https://github.com/IkedaLab-Daniel/explainora.ai",
     demo: "https://explainora.netlify.app/",
   },
   {
-    title: "Explainora AI",
-    description: "A full-stack AI-powered web app that helps users understand and get explanations for code snippets. It allows users to input code and receive intelligent explanations using integrated AI models. Ideal for developers, students, and anyone learning to code.",
-    tech: ["React", "Node", "Express", "CSS"],
-    image: `${explainora}`,
+    title: "PHPets",
+    description: "A simple e-commerce platform built in PHP for managing pet products, shopping cart, and checkout workflows.",
+    tech: ["PHP", "MySQL", "CSS"],
+    image: `${phpets}`,
     // github: "https://github.com/IkedaLab-Daniel/explainora.ai",
-    demo: "https://explainora.netlify.app/",
+    // demo: "https://explainora.netlify.app/",
   },
   {
-    title: "Explainora AI",
-    description: "A full-stack AI-powered web app that helps users understand and get explanations for code snippets. It allows users to input code and receive intelligent explanations using integrated AI models. Ideal for developers, students, and anyone learning to code.",
-    tech: ["React", "Node", "Express", "CSS"],
-    image: `${explainora}`,
+    title: "FreedomNote.js",
+    description: "A web application for creating, sharing, and managing notes within a board-based system. It provides features for both public and anonymous note posting, note approval by admins, and user authentication.",
+    tech: ["React", "Node", "Express", "MongoDB", "CSS"],
+    image: `${freedomnotes}`,
     // github: "https://github.com/IkedaLab-Daniel/explainora.ai",
-    demo: "https://explainora.netlify.app/",
+    demo: "https://freedomnotes.netlify.app/",
   },
   {
-    title: "Task Scheduler AI",
-    description: "AI-powered scheduler that recommends the best time for tasks using uploaded routines.",
-    tech: ["React", "Django", "MongoDB", "ML"],
-    image: "/assets/scheduler.png",
-    github: "https://github.com/yourusername/scheduler-ai",
+    title: "CV Drive",
+    description: "AFull stack JavaScript Website built in partial fulfillment of requirement for the subject Web Programming. In this website, users can register an account, upload, delete, and download documents.",
+    tech: ["React", "Node", "Express", "MongoDB", "CSS"],
+    image: `${cvdrive}`,
+    github: "https://github.com/IkedaLab-Daniel/CV_Drive",
     demo: "",
   },
 ];
@@ -53,6 +58,8 @@ const Projects = () => {
           <div key={i} className="gallery-item" data-aos="fade-up" onClick={() => setSelected(proj)}>
             <img src={proj.image} alt={proj.title} />
             <div className="project-title">{proj.title}</div>
+            <Maximize2 className='maximize' size={30} />
+            <Maximize2 className='maximize-mobile' size={20} />
           </div>
         ))}
       </div>
@@ -69,10 +76,15 @@ const Projects = () => {
               ))}
             </div>
             <div className="project-links">
-                {selected.github && <a href={selected.github} target="_blank" className='code-btn'>Code</a>}
+                {selected.github && 
+                <a href={selected.github} target="_blank" className='code-btn'>
+                    <img src={repositorysvg} alt="" />
+                    <span>Code</span>
+                </a>}
                 {/* {selected.demo && <a href={selected.demo} target="_blank">Live Demo <ExternalLink size={14} /></a>} */}
                 {selected.demo && 
                     <a href={selected.demo} target="_blank" className='live-demo-btn'>
+                        <img src={livesvg} alt="" />
                         <span>Live Demo</span>
                     </a>}
             </div>

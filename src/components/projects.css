@@ -27,15 +27,37 @@
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    transition: 0.4s;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 1.5px 6px rgba(0, 0, 0, 0.04);
+}
+
+.gallery-item:hover{
+    transform:scale(103%);
 }
 
 .gallery-item img {
   width: 100%;
   height: auto;
   border-radius: 1rem;
+  transition: .4s;
+  opacity: 0.9;
 }
+
+.gallery-item img:hover{
+    transform:scale(105%);
+    opacity: 1;
+}
+
+.gallery-item .maximize{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.gallery-item .maximize-mobile{
+    display: none;
+}
+
 
 .project-title {
   position: absolute;
@@ -96,6 +118,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    gap: 10px;
 }
 
 .project-links .code-btn{
@@ -108,7 +131,6 @@
 }
 
 .project-links a {
-  margin-right: 1rem;
   text-decoration: none;
   font-weight: 500;
   display: flex;
@@ -118,10 +140,16 @@
   width: 100%;
   border-radius: 8px;
   padding: 7px 0;
+  gap: 7px;
+  transition: .4s;
+}
+
+.project-links a:hover{
+    transform: translateY(-3px) scale(102%);
 }
 
 .project-links a img{
-    width: 2rem;
+    width: 1.2rem;
     margin: 0;
 }
 
@@ -137,4 +165,28 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .gallery-item {
+        border-radius: 6px;
+    }   
+
+    .gallery-item .maximize{
+        display: none;
+    }
+
+    .gallery-item .maximize-mobile{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        opacity: 0.4;
+    }
 }
