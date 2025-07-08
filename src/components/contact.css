@@ -125,3 +125,30 @@
   font-size: 0.85rem;
   color: #666;
 }
+
+@media (max-width: 768px) {
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .form-card{
+        width: 100%;
+    }
+
+    .social-links{
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center
+    }
+
+    .social-links a{
+        flex-direction: column;
+        width: 200px;
+        max-width: 47%;
+    }
+
+    .social-links img{
+        margin: 0 0 10px 0;
+    }
+}
