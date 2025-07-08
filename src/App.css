@@ -541,6 +541,15 @@ body::before {
   height: 80px;
   margin: 0 1rem;
 }
+
+footer {
+    text-align: center;
+    max-width: 1400px;
+    margin: auto auto 20px auto;
+    color: rgb(120, 120, 120);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
