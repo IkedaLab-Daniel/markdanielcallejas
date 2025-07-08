@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import contactgif from '../assets/contact.gif'
 import credlysvg from '../assets/credly.svg'
 import tiktoksvg from '../assets/tiktok.svg'
@@ -38,22 +40,44 @@ const Contact = () => {
         },
     ];
 
+    const formRef = useRef();
+    const [sent, setSent] = useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+        'service_dev_iceice',     
+        'template_mrfpb7y',    
+        formRef.current,
+        'iocACduXL1ysIjgcS'        
+        ).then(() => {
+        setSent(true);
+        formRef.current.reset();
+        }).catch((error) => {
+        console.log('Error:', error);
+        alert("Something went wrong!");
+        });
+    };
+
     return (
         <section id="contact">
             {/* <h2 data-aos="fade-up">Contact</h2>
             <p className="subtitle" data-aos="fade-up">Get in touch with me</p> */}
             <div className="contact-container">
-                <div className="form-card" data-aos="fade-up">
+                    <form ref={formRef} className="form-card" data-aos="fade-up" onSubmit={sendEmail}>
                     <div className="head-wrap">
                         <img src={contactgif} alt="" />
                         <h2>Send a message</h2>
                     </div>
                    
-                    <input type="text" placeholder="Your Name" />
-                    <input type="email" placeholder="Your Email" />
-                    <textarea placeholder="Your Message"></textarea>
-                    <button>Send Message</button>
-                </div>
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                    <button type='submit'>Send Message</button>
+                    {sent && <p className="sent-msg">✅ Message sent successfully!</p>}
+                </form>
 
                 <div className="social-links">
                     {socialLinks.map((link, index) => (

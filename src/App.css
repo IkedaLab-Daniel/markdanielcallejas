@@ -74,7 +74,7 @@ body::before {
 
 .hero .status-wrapper{
   display: flex;
-  gap: 10px;
+  gap: 5px;
   align-items: center;
 }
 
@@ -85,7 +85,7 @@ body::before {
 }
 
 .hero .status-wrapper img{
-  width: 1rem;
+  width: .8rem;
 }
 
 .hero .left .name {
