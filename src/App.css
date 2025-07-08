@@ -709,9 +709,7 @@ footer {
     flex-direction: column-reverse;
     margin-top: 0px;
   }
-/* 
-/ TODO: add vertical margin  
- */
+
   .tech-stack{
     gap: 0px;
   }

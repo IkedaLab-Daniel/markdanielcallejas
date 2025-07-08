@@ -44,6 +44,11 @@
     gap: 10px;
 }
 
+.form-card .head-wrap .heading{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
 .form-card .head-wrap img{
     width: 4rem;
 }
@@ -151,6 +156,14 @@ button:disabled{
 
     .form-card{
         width: 100%;
+    }
+
+     .form-card .head-wrap{
+        justify-content: center;
+     }
+    
+    .form-card .head-wrap .heading{
+        font-size: 1.3rem;
     }
 
     .social-links{

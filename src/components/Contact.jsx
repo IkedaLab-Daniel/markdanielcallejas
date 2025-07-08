@@ -85,7 +85,7 @@ const Contact = () => {
                     <form ref={formRef} className="form-card" data-aos="fade-up" onSubmit={sendEmail}>
                     <div className="head-wrap">
                         <img src={contactgif} alt="" />
-                        <h2>Send a message</h2>
+                        <p className='heading'>Send a message</p>
                     </div>
                    
                     <input type="text" name="name" placeholder="Your Name" required />
