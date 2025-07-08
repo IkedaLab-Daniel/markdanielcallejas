@@ -1,3 +1,5 @@
+import { useRef, useState } from 'react';
+import emailjs from 'emailjs-com';
 import contactgif from '../assets/contact.gif'
 import credlysvg from '../assets/credly.svg'
 import tiktoksvg from '../assets/tiktok.svg'
@@ -38,22 +40,62 @@ const Contact = () => {
         },
     ];
 
+    const formRef = useRef();
+    const [sent, setSent] = useState(false);
+    const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState()
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setIsLoading(true)
+        emailjs.sendForm(
+            'service_dev_iceice',     
+            'template_mrfpb7y',    
+            formRef.current,
+            'iocACduXL1ysIjgcS'        
+        )
+        .then(() => {
+            setSent(true);
+            setIsLoading(false)
+            setError("")
+            formRef.current.reset();
+        })
+        
+        .catch((error) => {
+            setIsLoading(false)
+            setError("Try again later")
+            console.log('Error:', error);
+        });
+    };
+
+    const getButtonLabel = () => {
+        if (isLoading) return 'Sending...';
+        if (sent && !error) return 'Sent!';
+        if (error) return 'Try again later';
+        return 'Send Message';
+    };
+
+    const isDisabled = isLoading || sent;
+
     return (
         <section id="contact">
             {/* <h2 data-aos="fade-up">Contact</h2>
             <p className="subtitle" data-aos="fade-up">Get in touch with me</p> */}
             <div className="contact-container">
-                <div className="form-card" data-aos="fade-up">
+                    <form ref={formRef} className="form-card" data-aos="fade-up" onSubmit={sendEmail}>
                     <div className="head-wrap">
                         <img src={contactgif} alt="" />
                         <h2>Send a message</h2>
                     </div>
                    
-                    <input type="text" placeholder="Your Name" />
-                    <input type="email" placeholder="Your Email" />
-                    <textarea placeholder="Your Message"></textarea>
-                    <button>Send Message</button>
-                </div>
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Your Email" required />
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                    <button type="submit" disabled={isDisabled}>
+                        {getButtonLabel()}
+                    </button>
+                </form>
 
                 <div className="social-links">
                     {socialLinks.map((link, index) => (
