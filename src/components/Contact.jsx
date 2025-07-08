@@ -4,24 +4,36 @@ import './contact.css';
 const Contact = () => {
 
     const socialLinks = [
-    {
-        name: 'LinkedIn',
-        url: 'https://linkedin.com/in/yourprofile',
-        img: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
-        description: 'Name Name Name Name',
-    },
-    {
-        name: 'LinkedIn',
-        url: 'https://linkedin.com/in/anotherprofile',
-        img: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
-        description: 'Name Name Name Name',
-    },
-    {
-        name: 'LinkedIn',
-        url: 'https://linkedin.com/in/thirdprofile',
-        img: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
-        description: 'Name Name Name Name',
-    },
+        {
+            name: 'GitHub',
+            url: 'https://github.com/IkedaLab-Daniel',
+            img: 'https://cdn-icons-png.flaticon.com/512/733/733553.png',
+            description: '@Ikedalab-Daniel',
+        },
+        {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/mark-daniel-callejas-b18b37230/',
+            img: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
+            description: 'Name Name NameName',
+        },
+        {
+            name: 'Facebook',
+            url: 'https://facebook.com/yourprofile',
+            img: 'https://cdn-icons-png.flaticon.com/512/733/733547.png',
+            description: 'Your Facebook Profile',
+        },
+        {
+            name: 'Credly',
+            url: 'https://www.credly.com/users/mark-daniel-callejas',
+            img: 'https://images.credly.com/images/open-graph/credly-logo-og.png',
+            description: 'Name Name NameName',
+        },
+        {
+            name: 'TikTok',
+            url: 'https://tiktok.com/@dev.iceice',
+            img: 'https://cdn-icons-png.flaticon.com/512/3046/3046122.png',
+            description: '@dev.iceice',
+        },
     ];
 
     return (
