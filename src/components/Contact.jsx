@@ -42,23 +42,40 @@ const Contact = () => {
 
     const formRef = useRef();
     const [sent, setSent] = useState(false);
+    const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState()
 
     const sendEmail = (e) => {
         e.preventDefault();
-
+        setIsLoading(true)
         emailjs.sendForm(
-        'service_dev_iceice',     
-        'template_mrfpb7y',    
-        formRef.current,
-        'iocACduXL1ysIjgcS'        
-        ).then(() => {
-        setSent(true);
-        formRef.current.reset();
-        }).catch((error) => {
-        console.log('Error:', error);
-        alert("Something went wrong!");
+            'service_dev_iceice',     
+            'template_mrfpb7y',    
+            formRef.current,
+            'iocACduXL1ysIjgcS'        
+        )
+        .then(() => {
+            setSent(true);
+            setIsLoading(false)
+            setError("")
+            formRef.current.reset();
+        })
+        
+        .catch((error) => {
+            setIsLoading(false)
+            setError("Try again later")
+            console.log('Error:', error);
         });
     };
+
+    const getButtonLabel = () => {
+        if (isLoading) return 'Sending...';
+        if (sent && !error) return 'Sent!';
+        if (error) return 'Try again later';
+        return 'Send Message';
+    };
+
+    const isDisabled = isLoading || sent;
 
     return (
         <section id="contact">
@@ -75,8 +92,9 @@ const Contact = () => {
                     <input type="email" name="email" placeholder="Your Email" required />
                     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
-                    <button type='submit'>Send Message</button>
-                    {sent && <p className="sent-msg">✅ Message sent successfully!</p>}
+                    <button type="submit" disabled={isDisabled}>
+                        {getButtonLabel()}
+                    </button>
                 </form>
 
                 <div className="social-links">

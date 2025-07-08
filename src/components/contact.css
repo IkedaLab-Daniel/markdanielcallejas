@@ -92,7 +92,6 @@
     transform: translateY(-10px) scale(103%);
 }
 
-
 .social-card {
   display: flex;
   align-items: center;
@@ -132,6 +131,12 @@
 
 .float-2{
   animation: float-2 5s ease-in-out infinite;
+}
+
+button:disabled{
+    opacity: 0.5;
+    pointer-events: none;
+    background-color: rgb(0, 0, 0);
 }
 
 @media (max-width: 768px) {
