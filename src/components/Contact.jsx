@@ -1,3 +1,4 @@
+import contactgif from '../assets/contact.gif'
 import './contact.css';
 
 const Contact = () => {
@@ -37,10 +38,15 @@ const Contact = () => {
 
     return (
         <section id="contact">
-            <h2 data-aos="fade-up">Contact</h2>
-            <p className="subtitle" data-aos="fade-up">Get in touch with me</p>
+            {/* <h2 data-aos="fade-up">Contact</h2>
+            <p className="subtitle" data-aos="fade-up">Get in touch with me</p> */}
             <div className="contact-container">
                 <div className="form-card">
+                    <div className="head-wrap">
+                        <img src={contactgif} alt="" />
+                        <h2>Send a message</h2>
+                    </div>
+                   
                     <input type="text" placeholder="Your Name" />
                     <input type="email" placeholder="Your Email" />
                     <textarea placeholder="Your Message"></textarea>

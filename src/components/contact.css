@@ -1,6 +1,6 @@
 #contact {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 0rem 1rem 4rem 1rem;
     max-width: 1440px;
     margin: auto;
 }
@@ -30,13 +30,24 @@
     flex: 1; /* ! takes up remaining space */
     min-width: 0; 
     background: white;
-    padding: 2rem;
+    padding: 1rem 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
+
+.form-card .head-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-card .head-wrap img{
+    width: 4rem;
+}
+
 
 .form-card input,
 .form-card textarea {
@@ -47,7 +58,7 @@
 }
 
 .form-card textarea {
-    height: 190px;
+    height: 145px;
     resize: none;
     border: 1px solid #ccc;
 }
