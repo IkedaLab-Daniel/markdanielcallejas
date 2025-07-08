@@ -84,7 +84,14 @@
 
 .social-links a{
     text-decoration: none;
+    transition: .4s;
 }
+
+.social-links a:hover{
+    cursor: pointer;
+    transform: translateY(-10px) scale(103%);
+}
+
 
 .social-card {
   display: flex;
