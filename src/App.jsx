@@ -4,6 +4,7 @@ import About from './components/About'
 import TechStack from './components/TechStack'
 import Credentials from './components/Credentials'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 import './App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -26,6 +27,7 @@ function App() {
       <TechStack />
       <Credentials />
       <Projects />
+      <Contact />
     </>
   )
 }

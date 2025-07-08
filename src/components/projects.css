@@ -18,7 +18,7 @@
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.5rem;
+  gap: 10px;
 }
 
 .gallery-item {
@@ -57,7 +57,6 @@
 .gallery-item .maximize-mobile{
     display: none;
 }
-
 
 .project-title {
   position: absolute;
