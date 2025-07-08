@@ -36,6 +36,11 @@ body::before {
   z-index: 4;
 }
 
+.navbar a{
+  display: flex;
+  align-items: center;
+}
+
 .navbar .navbar-wrapper {
   display: flex;
   background-color: white;
@@ -115,7 +120,7 @@ body::before {
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 6px;
-    border: none;
+    border: 2px solid black;
     background: black;
     color: #fff;
     box-shadow: 0 2px 12px rgba(79, 140, 255, 0.08);
@@ -216,7 +221,6 @@ body::before {
   display: none;
   width: 28px;
   height: 28px;
-  opacity: .7;
 }
 
 .navbar .navbar-wrapper .nav-text {
@@ -701,6 +705,11 @@ footer {
 
   .navbar .navbar-wrapper .nav-icon {
     display: inline-block;
+  }
+
+  .navbar .navbar-wrapper .nav-icon img{
+    width: 100%;
+    opacity: .7;
   }
 
   .about-wrapper {

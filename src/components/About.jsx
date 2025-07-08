@@ -23,7 +23,7 @@ const stats = [
 
 const About = () => {
     return (
-        <div className="about-wrapper">
+        <div className="about-wrapper" id='about'>
             <div className="about-left">
                 {stats.map((stat, index) => (
                 <div 

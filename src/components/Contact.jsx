@@ -18,19 +18,19 @@ const Contact = () => {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/mark-daniel-callejas-b18b37230/',
             img: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
-            description: 'Name Name NameName',
+            description: 'Mark Daniel Callejas',
         },
         {
             name: 'Facebook',
             url: 'https://facebook.com/yourprofile',
             img: 'https://cdn-icons-png.flaticon.com/512/733/733547.png',
-            description: 'Your Facebook Profile',
+            description: 'Mark Daniel Callejas',
         },
         {
             name: 'Credly',
             url: 'https://www.credly.com/users/mark-daniel-callejas',
             img: `${credlysvg}`,
-            description: 'Name Name NameName',
+            description: 'Mark Daniel Callejas',
         },
         {
             name: 'TikTok',

@@ -16,10 +16,18 @@ const Navbar = () => {
                     <span className="nav-item nav-text">Project</span>
                 </div>
                 
-                <img className="nav-item nav-icon" src={homesvg} alt="Home" />
-                <img className="nav-item nav-icon" src={aboutsvg} alt="About" />
-                <img className="nav-item nav-icon" src={skillsvg} alt="Skills" />
-                <img className="nav-item nav-icon" src={projectssvg} alt="Project" />
+                <a className='nav-icon' href="#home">
+                    <img className="nav-item" src={homesvg} alt="Home" />
+                </a>
+                <a className='nav-icon' href="#about">
+                    <img className="nav-item " src={aboutsvg} alt="About" />
+                </a>
+                <a className='nav-icon' href="#credentials">
+                     <img className="nav-item" src={skillsvg} alt="Skills" />
+                </a>
+                <a className='nav-icon' href="#projects">
+                    <img className="nav-item" src={projectssvg} alt="Project" />
+                </a>
 
                 <div className="divider"></div>
                 

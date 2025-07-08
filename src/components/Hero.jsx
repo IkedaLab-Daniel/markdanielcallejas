@@ -117,7 +117,7 @@ const Hero = () => {
 
     return(
         <>
-            <div className="hero">
+            <div className="hero" id='home'>
                 <div className="left" data-aos="fade-right">
                     <div className="status-wrapper">
                         <img src={availablesvg} alt="" />

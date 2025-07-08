@@ -85,7 +85,7 @@ const Credentials = () => {
   // }, [allBadges.length]);
 
   return (
-    <section className="credentials-section">
+    <section className="credentials-section" id='credentials'>
       <div className="container">
         <div className="card">
           <div className="section-header" data-aos="fade-up">
