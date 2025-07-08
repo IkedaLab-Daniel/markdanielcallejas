@@ -22,6 +22,7 @@ import reduxsvg from '../assets/redux.svg'
 import gitsvg from '../assets/git.svg'
 import figmasvg from '../assets/figma.svg'
 import phpsvg from '../assets/php.svg'
+import availablesvg from '../assets/available.svg'
 
 const techSets = [
   [
@@ -63,7 +64,8 @@ const allImages = [
   reduxsvg,
   gitsvg,
   figmasvg,
-  phpsvg
+  phpsvg,
+  availablesvg
 ]
 
 const Hero = () => {
@@ -117,6 +119,10 @@ const Hero = () => {
         <>
             <div className="hero">
                 <div className="left" data-aos="fade-right">
+                    <div className="status-wrapper">
+                        <img src={availablesvg} alt="" />
+                        <p className='status'>Available</p>
+                    </div>
                     <h1 className="name">Night is so peaceful guys</h1>
                     <h4>see you'll tommorow</h4>
                     <p>join yeolpunta group??????????</p>

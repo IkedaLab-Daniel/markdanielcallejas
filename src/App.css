@@ -72,6 +72,22 @@ body::before {
   gap: 20px;
 }
 
+.hero .status-wrapper{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.hero .status-wrapper .status{
+  color: #76e33b;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hero .status-wrapper img{
+  width: 1rem;
+}
+
 .hero .left .name {
   font-size: 3rem;
   font-weight: 700;
