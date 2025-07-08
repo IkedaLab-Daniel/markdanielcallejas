@@ -547,7 +547,6 @@ footer {
     max-width: 1400px;
     margin: auto auto 20px auto;
     color: rgb(120, 120, 120);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes scroll {
@@ -721,5 +720,9 @@ footer {
   .about-right .calendar-wrapper{
     max-width: 100%;
     overflow-x: scroll;
+  }
+
+  footer {
+    margin-bottom: 130px;
   }
 }

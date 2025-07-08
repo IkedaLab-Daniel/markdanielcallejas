@@ -79,8 +79,9 @@ const Contact = () => {
 
     return (
         <section id="contact">
-            {/* <h2 data-aos="fade-up">Contact</h2>
-            <p className="subtitle" data-aos="fade-up">Get in touch with me</p> */}
+            <h2 data-aos="fade-up">Let's Connect</h2>
+            <p className="subtitle" data-aos="fade-up">Have a question, collaboration idea, or just want to say hi?  
+    Drop me a message or reach out via socials!</p>
             <div className="contact-container">
                     <form ref={formRef} className="form-card" data-aos="fade-up" onSubmit={sendEmail}>
                     <div className="head-wrap">
