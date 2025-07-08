@@ -43,7 +43,7 @@ const Contact = () => {
             {/* <h2 data-aos="fade-up">Contact</h2>
             <p className="subtitle" data-aos="fade-up">Get in touch with me</p> */}
             <div className="contact-container">
-                <div className="form-card">
+                <div className="form-card" data-aos="fade-up">
                     <div className="head-wrap">
                         <img src={contactgif} alt="" />
                         <h2>Send a message</h2>
@@ -57,7 +57,14 @@ const Contact = () => {
 
                 <div className="social-links">
                     {socialLinks.map((link, index) => (
-                        <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="social-card">
+                        <a 
+                            key={index} 
+                            href={link.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="social-card"
+                            data-aos="flip-down"
+                            data-aos-delay={index * 100}>
                         <img src={link.img} alt={link.name} />
                         <div className="social-text">
                             <h4>{link.name}</h4>
