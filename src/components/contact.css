@@ -64,13 +64,18 @@
 }
 
 .form-card button {
-    padding: 0.8rem;
+    padding: 0.9rem;
     background: black;
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    transition: .4s;
+}
+
+.form-card button:hover{
+    transform: translateY(-3px) scale(102%);
 }
 
 .social-links {
