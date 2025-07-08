@@ -126,6 +126,14 @@
   color: #666;
 }
 
+.float-1{
+  animation: float-1 5s ease-in-out infinite;
+}
+
+.float-2{
+  animation: float-2 5s ease-in-out infinite;
+}
+
 @media (max-width: 768px) {
     .contact-container{
         flex-direction: column;
@@ -151,4 +159,22 @@
     .social-links img{
         margin: 0 0 10px 0;
     }
+}
+
+@keyframes float-1 {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(2deg);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translateY(-3px) rotate(3deg);
+  }
+  50% {
+    transform: translateY(2px) rotate(-3deg);
+  }
 }

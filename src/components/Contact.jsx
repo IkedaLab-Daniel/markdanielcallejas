@@ -62,10 +62,13 @@ const Contact = () => {
                             href={link.url} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="social-card"
+                            className={`social-card`}
                             data-aos="flip-down"
                             data-aos-delay={index * 100}>
-                        <img src={link.img} alt={link.name} />
+                        <img 
+                        src={link.img} 
+                        alt={link.name}
+                        className={`${index % 2 === 0 ? 'float-1' : 'float-2'}`} />
                         <div className="social-text">
                             <h4>{link.name}</h4>
                             <p>{link.description}</p>
