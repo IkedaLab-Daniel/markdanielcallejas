@@ -45,7 +45,7 @@ const About = () => {
         <div className="about-right" data-aos="fade-up">
             <h2 className="about-heading">About</h2>
             <p className="about-quote"><em>“Spend nights improving...”</em></p>
-            <p className="about-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus praesentium, beatae sed ullam ipsam distinctio consequuntur quos autem dolor accusantium corporis quibusdam alias eius sunt est fugit tenetur ab laboriosam.</p>
+            <p className="about-description">IT student and aspiring full-stack developer from the Philippines. I enjoy building clean, functional web apps using tools like React, Node.js, Django, and MongoDB. I’m self-taught through hands-on projects and online courses from Meta, IBM, and Google.</p>
             <h3>GitHub Contribution Chart:</h3>
             <div className='calendar-wrapper'>
                 <GitHubCalendar

@@ -10,10 +10,18 @@ const Navbar = () => {
         <div className="navbar">
             <div className="navbar-wrapper">
                 <div className="link-container">
-                    <span className="nav-item nav-text">Home</span>
-                    <span className="nav-item nav-text">About</span>
-                    <span className="nav-item nav-text">Skills</span>
-                    <span className="nav-item nav-text">Project</span>
+                    <a href="#home">
+                        <span className="nav-item nav-text">Home</span>
+                    </a>
+                    <a href="#about">
+                        <span className="nav-item nav-text">About</span>
+                    </a>
+                    <a href="#credentials">
+                        <span className="nav-item nav-text">Credentials</span>
+                    </a>
+                    <a href="#projects">
+                        <span className="nav-item nav-text">Project</span>
+                    </a>
                 </div>
                 
                 <a className='nav-icon' href="#home">

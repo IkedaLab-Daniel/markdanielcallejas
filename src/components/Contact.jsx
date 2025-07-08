@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import contactgif from '../assets/contact.gif'
 import credlysvg from '../assets/credly.svg'
 import tiktoksvg from '../assets/tiktok.svg'
+import sendsvg from '../assets/send.svg'
 import './contact.css';
 
 const Contact = () => {
@@ -94,6 +95,7 @@ const Contact = () => {
                     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
 
                     <button type="submit" disabled={isDisabled}>
+                        <img src={sendsvg} alt="" />
                         {getButtonLabel()}
                     </button>
                 </form>

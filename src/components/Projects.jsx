@@ -51,7 +51,7 @@ const Projects = () => {
   return (
     <section className="projects-gallery" id="projects">
       <h2 data-aos="fade-up">Projects</h2>
-      <p className="subtitle" data-aos="fade-up">Click on a project to learn more</p>
+      <p className="subtitle" data-aos="fade-up">A selection of web projects I’ve built to learn, solve problems, and grow as a developer. Click on a project to learn more</p>
 
       <div className="gallery-grid">
         {projectList.map((proj, i) => (

@@ -69,18 +69,27 @@
 }
 
 .form-card button {
-    padding: 0.9rem;
+    padding: 12px;
     background: black;
     color: white;
     font-weight: bold;
+    font-size: 1rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .form-card button:hover{
     transform: translateY(-3px) scale(102%);
+}
+
+.form-card button img{
+  width: 1.4rem;
 }
 
 .social-links {

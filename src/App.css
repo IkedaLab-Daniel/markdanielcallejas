@@ -62,6 +62,25 @@ body::before {
   align-items: center;
 }
 
+.navbar .navbar-wrapper .link-container a{
+  text-decoration: none;
+}
+
+.navbar .navbar-wrapper .link-container span{
+  transition: .4s;
+}
+
+.navbar .navbar-wrapper .link-container span:hover{
+  color: rgb(0, 0, 0);
+  transform: translateY(-2px) scale(105%);
+}
+
+.navbar .navbar-wrapper .link-container span:active{
+  transform: translateY(0px) scale(95%);
+  color: #6a6a6a4e;
+}
+
+
 .hero{
   display: flex;
   margin: 70px auto auto auto;
@@ -328,7 +347,7 @@ body::before {
 
 .about-right {
   background: #fff;
-  padding: 2rem;
+  padding: 1.2rem 2rem 0px 2rem;
   border-radius: 1rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   flex: 2;

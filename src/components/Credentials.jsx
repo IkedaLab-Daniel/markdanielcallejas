@@ -90,7 +90,7 @@ const Credentials = () => {
         <div className="card">
           <div className="section-header" data-aos="fade-up">
             <h2>Credentials</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae praesentium odit non ea culpa dolorem, possimus ad voluptate excepturi odio distinctio unde esse.</p>
+            <p>A showcase of the certificates and badges I've earned through hands-on learning and professional development.</p>
           </div>
 
           <div className="cert-grid">
