@@ -1,4 +1,6 @@
 import contactgif from '../assets/contact.gif'
+import credlysvg from '../assets/credly.svg'
+import tiktoksvg from '../assets/tiktok.svg'
 import './contact.css';
 
 const Contact = () => {
@@ -25,13 +27,13 @@ const Contact = () => {
         {
             name: 'Credly',
             url: 'https://www.credly.com/users/mark-daniel-callejas',
-            img: 'https://images.credly.com/images/open-graph/credly-logo-og.png',
+            img: `${credlysvg}`,
             description: 'Name Name NameName',
         },
         {
             name: 'TikTok',
             url: 'https://tiktok.com/@dev.iceice',
-            img: 'https://cdn-icons-png.flaticon.com/512/3046/3046122.png',
+            img: `${tiktoksvg}`,
             description: '@dev.iceice',
         },
     ];
