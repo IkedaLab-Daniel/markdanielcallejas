@@ -1,0 +1,131 @@
+.project-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.project-page h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.project-page p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  display: flex;
+  gap: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  align-items: center;
+  transition: border 0.3s;
+  margin-bottom: 2rem;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.device-preview {
+  width: 100%;
+  max-width: 300px;
+}
+
+.content-section {
+  flex: 2;
+}
+
+.tag {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0.2rem 0;
+}
+
+h5 {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.2rem 0 1rem;
+}
+
+.tech-tags span {
+  display: inline-block;
+  background: #eee;
+  padding: 0.3rem 0.6rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+  font-size: 0.75rem;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.features span {
+  margin-right: 1rem;
+  font-size: 0.85rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  transition: background 0.3s;
+}
+
+.code {
+  background: #000;
+  color: #fff;
+}
+
+.demo {
+  border: 2px solid #000;
+  color: #000;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .project-card,
+  .project-card.reverse {
+    flex-direction: column;
+  }
+}

@@ -1,15 +1,10 @@
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import About from './components/About'
-import TechStack from './components/TechStack'
-import Credentials from './components/Credentials'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+import Home from './pages/Home'
+import ProjectPages from './pages/ProjectsPage'
 import './App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   useEffect(() => {
@@ -22,14 +17,10 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <TechStack />
-      <Credentials />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectPages />} />
+      </Routes>
     </>
   )
 }
