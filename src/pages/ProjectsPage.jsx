@@ -23,8 +23,8 @@ const projects = [
         features: ["Fast Explain", "Smart Explain", "Suggestions"],
         stack: ["react", "css", "node", "express"],
         image: `${explainora}`,
-        codeLink: "#",
-        demoLink: "#",
+        codeLink: "",
+        demoLink: "https://explainora.netlify.app/",
     },
     {
         id: 2,
@@ -33,11 +33,11 @@ const projects = [
         description:
             "Freedom Notes is a web application for creating, sharing, and managing notes within a board-based system. It provides features for both public and anonymous note posting, note approval by admins, and user authentication.",
         tags: ["React", "CSS", "Node", "Express", "MongoDB"],
-        features: ["Feature", "Feature", "Feature"],
+        features: ["Anonymous Post", "Admin Panel", "Account Management"],
         stack: ["react", "css", "node", "express"],
         image: `${freedomnotes}`,
-        codeLink: "#",
-        demoLink: "#",
+        codeLink: "",
+        demoLink: "https://freedomnotes.netlify.app/",
     },
     {
         id: 3,
@@ -46,11 +46,11 @@ const projects = [
         description:
             "A simple e-commerce platform built in PHP for managing pet products, shopping cart, and checkout workflows.",
         tags: ["PHP", "CSS", "MySQL"],
-        features: ["Feature", "Feature", "Feature"],
+        features: ["Buyer", "Seller", "Admin Panel"],
         stack: ["react", "css", "node", "express"],
         image: `${phpets}`,
-        codeLink: "#",
-        demoLink: "#",
+        codeLink: "",
+        demoLink: "",
     },
     {
         id: 4,
@@ -59,32 +59,25 @@ const projects = [
         description:
             "My first full stack web application.",
         tags: ["React", "CSS", "Node", "Express", "MongoDB"],
-        features: ["Feature", "Feature", "Feature"],
+        features: ["Account Management", "Upload, Download, Delete"],
         stack: ["react", "css", "node", "express"],
         image: `${cvdrive}`,
-        codeLink: "#",
-        demoLink: "#",
+        codeLink: "https://github.com/IkedaLab-Daniel/CV_Drive",
+        demoLink: "",
     },
 ];
-
-const stackIcons = {
-    react: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
-    css: "https://cdn-icons-png.flaticon.com/512/732/732190.png",
-    node: "https://cdn-icons-png.flaticon.com/512/919/919825.png",
-    express: "https://cdn-icons-png.flaticon.com/512/919/919836.png",
-};
 
 const ProjectsPage = () => {
     return (
         <section className="project-page">
-            <h2>My Works</h2>
-            <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+            <h2 data-aos="fade-up">My Works</h2>
+            <p className="header-subtitle" data-aos="fade-up">lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
             <Link to="/">
-              <div className="back-modal">
+              <div className="back-modal" data-aos="fade-up">
                 <House size={17}/>
                 <p>Back Home</p>
               </div>
-              <div className="back-modal-mobile">
+              <div className="back-modal-mobile" data-aos="fade-up">
                 <House size={17}/>
                 <p>Back</p>
               </div>
@@ -94,6 +87,7 @@ const ProjectsPage = () => {
                 <div
                     className={`project-card ${index % 2 !== 0 ? "reverse" : ""}`}
                     key={proj.id}
+                    data-aos="fade-up"
                 >
                     <div className="image-section">
                         <img
@@ -123,15 +117,21 @@ const ProjectsPage = () => {
                         </div>
 
                         <div className="buttons">
-                            <a href={proj.codeLink} className="btn code">
-                                <img src={repoSVG} alt="" />
-                                <span>Code</span>
-                            </a>
-                            <a href={proj.demoLink} className="btn demo">
-                                <img src={liveSVG} alt="" />
-                                <span>Live Demo</span>
-                            </a>
-                        </div>
+                          <a 
+                              href={proj.codeLink} 
+                              className={`btn code ${!proj.codeLink && 'disabled'}`}
+                          >
+                              <img src={repoSVG} alt="" />
+                              <span>Code</span>
+                          </a>
+                          <a 
+                              href={proj.demoLink} 
+                              className={`btn demo ${!proj.demoLink && 'disabled'}`}
+                          >
+                              <img src={liveSVG} alt="" />
+                              <span>Live Demo</span>
+                          </a>
+                      </div>
                     </div>
                 </div>
             ))}

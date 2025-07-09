@@ -123,9 +123,9 @@ const Hero = () => {
                         <img src={availablesvg} alt="" />
                         <p className='status'>Available</p>
                     </div>
-                    <h1 className="name">Night is so peaceful guys</h1>
-                    <h4>see you'll tommorow</h4>
-                    <p>join yeolpunta group??????????</p>
+                    <h1 className="name">Mark Daniel Callejas</h1>
+                    <h4>Software Engineer | Web Development</h4>
+                    <p></p>
                     <div className="button-container">
                         <a href="#contact">
                             <button className='contact'>Contact</button>

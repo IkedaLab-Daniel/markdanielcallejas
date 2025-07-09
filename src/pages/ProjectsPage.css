@@ -8,11 +8,17 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
+  margin-top: 20px;
 }
 
 .project-page p {
   color: #666;
   margin-bottom: 10px;
+}
+
+.project-page p.header-subtitle{
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .project-card {
@@ -32,17 +38,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.tech-icons {
-  display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.tech-icons img {
-  width: 30px;
-  height: 30px;
 }
 
 .device-preview {
@@ -106,7 +101,7 @@ p {
 .btn {
   text-decoration: none;
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  border-radius: 6px;
   font-weight: bold;
   font-size: 0.9rem;
   transition: 0.4s;
@@ -123,6 +118,11 @@ p {
 
 .btn:hover{
   transform: translateY(-4px) scale(103%);
+}
+
+.btn.disabled{
+  pointer-events: none;
+  opacity: 0.4;
 }
 
 .code {
@@ -152,6 +152,7 @@ p {
   align-items: center;
   gap: 10px;
   transition: .4s;
+  z-index: 2;
 }
 
 .back-modal:hover{
@@ -165,6 +166,7 @@ p {
 
 .back-modal-mobile{
   display: none;
+  z-index: 2;
 }
 
 .back-modal-mobile p{
@@ -173,9 +175,17 @@ p {
 }
 
 @media (max-width: 768px) {
+  .project-page{
+    padding: 0px 15px;
+  }
+
   .project-card,
   .project-card.reverse {
     flex-direction: column;
+  }
+
+  .project-card {
+    padding: 25px;
   }
 
   .back-modal{
@@ -195,6 +205,11 @@ p {
     color: white;
     padding: 15px 25px;
     border-radius: 10px;
+  }
+
+  .btn{
+    padding: 10px 0;
+    gap: 5px;
   }
 
 }
