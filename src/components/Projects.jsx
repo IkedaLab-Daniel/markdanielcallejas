@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CircleX, Maximize2 } from 'lucide-react'
+import { Link } from 'react-router-dom';
 import './projects.css';
 
 // > images
@@ -52,6 +53,9 @@ const Projects = () => {
     <section className="projects-gallery" id="projects">
       <h2 data-aos="fade-up">Projects</h2>
       <p className="subtitle" data-aos="fade-up">A selection of web projects I’ve built to learn, solve problems, and grow as a developer. Click on a project to learn more</p>
+      <Link to="/projects">
+        <p data-aos="fade-up" className="subtitle">Go to Project Showcase</p>
+      </Link>
 
       <div className="gallery-grid">
         {projectList.map((proj, i) => (

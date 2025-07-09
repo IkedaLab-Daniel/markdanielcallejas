@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { House } from 'lucide-react'
 import "./ProjectsPage.css";
 
 // > images - mockups
@@ -5,6 +7,11 @@ import explainora from '../assets/explainora-square.png'
 import freedomnotes from '../assets/freedomnotes-square.png'
 import phpets from '../assets/phpets-square.png'
 import cvdrive from '../assets/cvdrive-square.png'
+
+// > images - svgs
+import repoSVG from '../assets/repository.svg'
+import liveSVG from '../assets/live.svg'
+
 const projects = [
     {
         id: 1,
@@ -72,6 +79,16 @@ const ProjectsPage = () => {
         <section className="project-page">
             <h2>My Works</h2>
             <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+            <Link to="/">
+              <div className="back-modal">
+                <House size={17}/>
+                <p>Back Home</p>
+              </div>
+              <div className="back-modal-mobile">
+                <House size={17}/>
+                <p>Back</p>
+              </div>
+            </Link>
 
             {projects.map((proj, index) => (
                 <div
@@ -107,10 +124,12 @@ const ProjectsPage = () => {
 
                         <div className="buttons">
                             <a href={proj.codeLink} className="btn code">
-                                Code
+                                <img src={repoSVG} alt="" />
+                                <span>Code</span>
                             </a>
                             <a href={proj.demoLink} className="btn demo">
-                                Live Demo
+                                <img src={liveSVG} alt="" />
+                                <span>Live Demo</span>
                             </a>
                         </div>
                     </div>
