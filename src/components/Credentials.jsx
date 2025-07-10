@@ -23,7 +23,7 @@ import gitess from '../assets/gitess.png'
 import seess from '../assets/seess.png'
 import cloud from '../assets/cloud.png'
 import './credential.css';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Medal } from 'lucide-react';
 
 const Credentials = () => {
   const featuredCertificates = [
@@ -121,6 +121,7 @@ const Credentials = () => {
             <div className="carousel">
               <div className="link-to-badge">
                 <div className="wrapper">
+                  <Medal />
                   <p>See All Credentials</p>
                 </div>
                 

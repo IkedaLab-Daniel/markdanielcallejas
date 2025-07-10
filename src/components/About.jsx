@@ -30,7 +30,7 @@ const About = () => {
                   className="stat-card" 
                   key={index}
                   data-aos="flip-down"
-                  data-aos-delay={index * 100}
+                  // data-aos-delay={index * 100}
                 >
                     <div className="stat-icon">{stat.icon}</div>
                         <div className="stat-info">
