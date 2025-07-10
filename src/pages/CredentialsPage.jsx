@@ -191,7 +191,9 @@ const CredentialsPage = () => {
 
       <h3 className="section-title">Badges</h3>
       {renderCards(badges, 'badge')}
-
+      <div className="link-wrapper" data-aos="fade-left">
+        <a className='link-to-credly' href='https://www.credly.com/users/mark-daniel-callejas/' target='_blank'>Visit Official Credly Profile</a>
+      </div>
       <h3 className="section-title">Certificates</h3>
       {renderCards(certificates, 'certificate')}
     </section>
