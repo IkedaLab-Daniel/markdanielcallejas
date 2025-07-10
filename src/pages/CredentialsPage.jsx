@@ -1,5 +1,8 @@
 import cert1 from '../assets/metafrontend.jpeg';
+
+// > bagdes
 import badgefrontend from '../assets/badgefrontend.png'
+import badgebackend from '../assets/badgebackend.png'
 import './CredentialsPage.css';
 
 const credentialsData = [
@@ -71,16 +74,18 @@ const credentialsData = [
     id: 5,
     type: 'badge',
     title: 'Meta Front-End Developer Certificate',
-    org: 'Coursera | April 1, 2025',
+    org: 'Coursera | META',
+    date: 'Oct. 2, 2024',
     image: badgefrontend,
     stack: ['react', 'django', 'mysql'],
   },
   {
     id: 6,
     type: 'badge',
-    title: 'Sample Badg',
-    org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
+    title: 'Meta Back-End Developer Certificate',
+    org: 'Coursera | META',
+    date: 'March 29, 2025',
+    image: badgebackend,
     stack: ['react', 'django', 'mysql'],
   },
   {
@@ -151,6 +156,7 @@ const CredentialsPage = () => {
           <div className="info-wrapper">
             <h4>{item.title}</h4>
             <p>{item.org}</p>
+            <p>{item.date}</p>
             {/* <div className="stack">
               {item.stack.map((tech) => (
                 <img key={tech} src={techIcons[tech]} alt={tech} />
