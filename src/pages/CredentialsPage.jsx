@@ -1,6 +1,7 @@
+// > placehoders
 import cert1 from '../assets/metafrontend.jpeg';
 
-// > bagdes
+// > imgs - badges
 import badgefullstack from '../assets/badgefullstack.png'
 import badgefrontend from '../assets/badgefrontend.png'
 import badgebackend from '../assets/badgebackend.png'
@@ -17,71 +18,18 @@ import webdev from '../assets/webdev.png'
 import gitess from '../assets/gitess.png'
 import seess from '../assets/seess.png'
 import cloud from '../assets/cloud.png'
+
+// > style
 import './CredentialsPage.css';
 
 const credentialsData = [
   {
-    id: 1,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 2,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 3,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
     id: 4,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
+    type: 'badge',
+    title: 'Meta Full-Stack Engineer Certificate',
     org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 1,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 2,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 3,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 4,
-    type: 'certificate',
-    title: 'Meta Back-End Developer',
-    org: 'Coursera | META',
-    image: cert1,
+    date: 'Apr. 16, 2025',
+    image: badgefullstack,
     stack: ['react', 'django', 'mysql'],
   },
   {
