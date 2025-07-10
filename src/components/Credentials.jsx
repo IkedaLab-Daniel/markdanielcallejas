@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // > certificates
 import metafrontend from '../assets/metafrontend.jpeg'
@@ -120,10 +121,10 @@ const Credentials = () => {
           <div className="skills-section" data-aos="fade-up">
             <div className="carousel">
               <div className="link-to-badge">
-                <div className="wrapper">
+                <Link to="/credentials" className="wrapper">
                   <Medal />
                   <p>See All Credentials</p>
-                </div>
+                </Link>
                 
               </div>
               <div className="carousel-track">
