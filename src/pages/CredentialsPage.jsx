@@ -53,9 +53,10 @@ const credentialsData = [
   {
     id: 7,
     type: 'badge',
-    title: 'Sample Badge',
-    org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
+    title: 'Google UX Design Professional Certificate',
+    org: 'Coursera | Google',
+    date: 'Apr. 12, 2025',
+    image: ux,
     stack: ['react', 'django', 'mysql'],
   },
   {
