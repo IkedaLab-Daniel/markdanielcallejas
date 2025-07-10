@@ -30,7 +30,6 @@ const credentialsData = [
     org: 'Coursera | META',
     date: 'Apr. 16, 2025',
     image: badgefullstack,
-    stack: ['react', 'django', 'mysql'],
   },
   {
     id: 5,
@@ -39,7 +38,6 @@ const credentialsData = [
     org: 'Coursera | META',
     date: 'Oct. 2, 2024',
     image: badgefrontend,
-    stack: ['react', 'django', 'mysql'],
   },
   {
     id: 6,
@@ -48,7 +46,6 @@ const credentialsData = [
     org: 'Coursera | META',
     date: 'March 29, 2025',
     image: badgebackend,
-    stack: ['react', 'django', 'mysql'],
   },
   {
     id: 7,
@@ -57,47 +54,21 @@ const credentialsData = [
     org: 'Coursera | Google',
     date: 'Apr. 12, 2025',
     image: ux,
-    stack: ['react', 'django', 'mysql'],
   },
   {
     id: 8,
     type: 'badge',
-    title: 'Sample Badge',
-    org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
-    stack: ['react', 'django', 'mysql'],
+    title: 'JavaScript Essentials 2',
+    org: 'Cisco',
+    date: 'Oct. 16, 2024',
+    image: js2,
   },
   {
     id: 5,
     type: 'badge',
-    title: 'Sample Badge',
+    title: '',
     org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 6,
-    type: 'badge',
-    title: 'Sample Badge',
-    org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 7,
-    type: 'badge',
-    title: 'Sample Badge',
-    org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
-    stack: ['react', 'django', 'mysql'],
-  },
-  {
-    id: 8,
-    type: 'badge',
-    title: 'Sample Badge',
-    org: 'Coursera | April 1, 2025',
-    image: badgefrontend,
-    stack: ['react', 'django', 'mysql'],
+    image: js1,
   },
 ];
 // sample 
@@ -114,7 +85,7 @@ const CredentialsPage = () => {
   const renderCards = (items, type) => (
     <div className={`grid ${type}`}>
       {items.map((item) => (
-        <div className="card" key={item.id}>
+        <div className="card" key={item.id} data-aos="flip-up">
           <img src={item.image} alt={item.title} />
           <div className="info-wrapper">
             <h4>{item.title}</h4>
