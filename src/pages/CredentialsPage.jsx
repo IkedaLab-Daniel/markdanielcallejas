@@ -1,8 +1,22 @@
 import cert1 from '../assets/metafrontend.jpeg';
 
 // > bagdes
+import badgefullstack from '../assets/badgefullstack.png'
 import badgefrontend from '../assets/badgefrontend.png'
 import badgebackend from '../assets/badgebackend.png'
+import ux from '../assets/badgeux.png'
+import js2 from '../assets/badgejs2.png'
+import js1 from '../assets/badgejs1.png'
+import cybersec from '../assets/badgecyber.png'
+import itess from '../assets/badgeitess.png'
+import badgehtml from '../assets/badgehtmless.png'
+import nodeexpress from '../assets/nodeexpress.png'
+import jsibm from '../assets/jsessibm.png'
+import frontendess from '../assets/frontendreact.png'
+import webdev from '../assets/webdev.png'
+import gitess from '../assets/gitess.png'
+import seess from '../assets/seess.png'
+import cloud from '../assets/cloud.png'
 import './CredentialsPage.css';
 
 const credentialsData = [
