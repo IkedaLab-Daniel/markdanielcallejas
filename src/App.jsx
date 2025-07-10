@@ -1,5 +1,6 @@
 import Home from './pages/Home'
 import ProjectPages from './pages/ProjectsPage'
+import CredentialsPage from './pages/CredentialsPage'
 import ScrollToTop from './utils/ScrollToTop'
 import './App.css'
 import AOS from 'aos'
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectPages />} />
+        <Route path="/credentials" element={<CredentialsPage />} />
       </Routes>
     </>
   )

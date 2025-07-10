@@ -119,6 +119,12 @@ const Credentials = () => {
 
           <div className="skills-section" data-aos="fade-up">
             <div className="carousel">
+              <div className="link-to-badge">
+                <div className="wrapper">
+                  <p>See All Credentials</p>
+                </div>
+                
+              </div>
               <div className="carousel-track">
                 {[...allBadges, ...allBadges].map((badge, index) => (
                   <div className="badge" key={`${badge.id}-${index}`}>
@@ -131,26 +137,6 @@ const Credentials = () => {
             </div>
           </div>
 
-          {/* <div className="stats">
-            <div>
-              <div className="stat-num">25+</div>
-              <div className="stat-label">Certifications</div>
-            </div>
-            <div>
-              <div className="stat-num">6</div>
-              <div className="stat-label">Cloud Platforms</div>
-            </div>
-            <div>
-              <div className="stat-num">12</div>
-              <div className="stat-label">Tech Domains</div>
-            </div>
-          </div>
-
-          <div className="btn-wrapper">
-            <button onClick={() => window.open('/credentials', '_blank')}>
-              View All Credentials <ExternalLink size={18} />
-            </button>
-          </div> */}
         </div>
       </div>
     </section>
