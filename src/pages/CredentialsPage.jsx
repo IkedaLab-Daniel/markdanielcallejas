@@ -1,95 +1,178 @@
-import { useState } from "react";
-import cert1 from '../assets/metafrontend.jpeg'
-import "./CredentialsPage.css";
+import cert1 from '../assets/metafrontend.jpeg';
+import badgefrontend from '../assets/badgefrontend.png'
+import './CredentialsPage.css';
 
 const credentialsData = [
   {
     id: 1,
-    type: "certificate",
-    title: "Meta Back-End Developer",
-    org: "Coursera | META",
-    image: `${cert1}`,
-    stack: ["react", "django", "mysql"],
-  },
-  {
-    id: 1,
-    type: "certificate",
-    title: "Meta Back-End Developer",
-    org: "Coursera | META",
-    image: `${cert1}`,
-    stack: ["react", "django", "mysql"],
-  },
-  {
-    id: 1,
-    type: "certificate",
-    title: "Meta Back-End Developer",
-    org: "Coursera | META",
-    image: `${cert1}`,
-    stack: ["react", "django", "mysql"],
-  },
-  {
-    id: 1,
-    type: "certificate",
-    title: "Meta Back-End Developer",
-    org: "Coursera | META",
-    image: `${cert1}`,
-    stack: ["react", "django", "mysql"],
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
   },
   {
     id: 2,
-    type: "badge",
-    title: "Meta Back-End Developer",
-    org: "Coursera | April 1, 2025",
-    image: `${cert1}`,
-    stack: ["react", "django", "mysql"],
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
   },
-  // add more...
+  {
+    id: 3,
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 4,
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 1,
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 2,
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 3,
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 4,
+    type: 'certificate',
+    title: 'Meta Back-End Developer',
+    org: 'Coursera | META',
+    image: cert1,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 5,
+    type: 'badge',
+    title: 'Meta Front-End Developer Certificate',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 6,
+    type: 'badge',
+    title: 'Sample Badg',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 7,
+    type: 'badge',
+    title: 'Sample Badge',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 8,
+    type: 'badge',
+    title: 'Sample Badge',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 5,
+    type: 'badge',
+    title: 'Sample Badge',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 6,
+    type: 'badge',
+    title: 'Sample Badge',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 7,
+    type: 'badge',
+    title: 'Sample Badge',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
+  {
+    id: 8,
+    type: 'badge',
+    title: 'Sample Badge',
+    org: 'Coursera | April 1, 2025',
+    image: badgefrontend,
+    stack: ['react', 'django', 'mysql'],
+  },
 ];
-
+// sample 
 const techIcons = {
-  react: "https://cdn-icons-png.flaticon.com/512/1126/1126012.png",
-  django: "https://cdn-icons-png.flaticon.com/512/919/919837.png",
-  mysql: "https://cdn-icons-png.flaticon.com/512/919/919836.png",
+  react: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png',
+  django: 'https://cdn-icons-png.flaticon.com/512/919/919837.png',
+  mysql: 'https://cdn-icons-png.flaticon.com/512/919/919836.png',
 };
 
 const CredentialsPage = () => {
-  const [filter, setFilter] = useState("all");
+  const badges = credentialsData.filter(item => item.type === 'badge');
+  const certificates = credentialsData.filter(item => item.type === 'certificate');
 
-  const filtered = credentialsData.filter(
-    (item) => filter === "all" || item.type === filter
+  const renderCards = (items, type) => (
+    <div className={`grid ${type}`}>
+      {items.map((item) => (
+        <div className="card" key={item.id}>
+          <img src={item.image} alt={item.title} />
+          <div className="info-wrapper">
+            <h4>{item.title}</h4>
+            <p>{item.org}</p>
+            {/* <div className="stack">
+              {item.stack.map((tech) => (
+                <img key={tech} src={techIcons[tech]} alt={tech} />
+              ))}
+            </div> */}
+          </div>
+          
+        </div>
+      ))}
+    </div>
   );
 
   return (
     <section className="credentials" id="credentials-page">
-      <h2>Head</h2>
-      <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+      <h2>Credentials</h2>
+      <p>These are some of my achievements and recognitions.</p>
 
-      <div className="filters">
-        {["all", "certificate", "badge"].map((f) => (
-          <button
-            key={f}
-            className={filter === f ? "active" : ""}
-            onClick={() => setFilter(f)}
-          >
-            {f.charAt(0).toUpperCase() + f.slice(1)}s
-          </button>
-        ))}
-      </div>
+      <h3 className="section-title">Badges</h3>
+      {renderCards(badges, 'badge')}
 
-      <div className="grid">
-        {filtered.map((item) => (
-          <div className="card" key={item.id}>
-            <img src={item.image} alt={item.title} />
-            <h4>{item.title}</h4>
-            <p>{item.org}</p>
-            <div className="stack">
-              {item.stack.map((tech) => (
-                <img key={tech} src={techIcons[tech]} alt={tech} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+      <h3 className="section-title">Certificates</h3>
+      {renderCards(certificates, 'certificate')}
     </section>
   );
 };
