@@ -19,6 +19,11 @@ import gitess from '../assets/gitess.png'
 import seess from '../assets/seess.png'
 import cloud from '../assets/cloud.png'
 
+// > img - certificates
+import metafrontend from '../assets/metafrontend.jpeg'
+import metabackend from '../assets/metabackend.jpeg'
+import googleux from '../assets/googleux.jpeg'
+
 // > style
 import './CredentialsPage.css';
 
@@ -150,14 +155,49 @@ const credentialsData = [
     org: 'Coursera',
     date: 'Mar 24, 2024',
     image: cloud,
+  },
+  {
+    id: 13,
+    type: 'certificate',
+    title: 'Meta Front-End Developer Certificate',
+    org: 'Coursera | Meta',
+    date: 'Oct 2, 2024',
+    image: metafrontend,
+    skills: ["React", "CSS"]
+  },
+  {
+    id: 14,
+    type: 'certificate',
+    title: 'Meta Back-End Developer Certificate',
+    org: 'Coursera | Meta',
+    date: 'Apr. 14, 2025',
+    image: metabackend,
+  },
+  {
+    id: 15,
+    type: 'certificate',
+    title: 'Google UX Design',
+    org: 'Coursera | Google',
+    date: 'April 12, 2024',
+    image: googleux,
+  },
+  {
+    id: 14,
+    type: 'certificate',
+    title: 'Meta Back-End Developer Certificate',
+    org: 'Coursera | Meta',
+    date: 'Apr. 14, 2025',
+    image: metabackend,
+  },
+  {
+    id: 15,
+    type: 'certificate',
+    title: 'Google UX Design',
+    org: 'Coursera | Google',
+    date: 'April 12, 2024',
+    image: googleux,
   }
 ];
-// sample 
-const techIcons = {
-  react: 'https://cdn-icons-png.flaticon.com/512/1126/1126012.png',
-  django: 'https://cdn-icons-png.flaticon.com/512/919/919837.png',
-  mysql: 'https://cdn-icons-png.flaticon.com/512/919/919836.png',
-};
 
 const CredentialsPage = () => {
   const badges = credentialsData.filter(item => item.type === 'badge');
@@ -172,11 +212,13 @@ const CredentialsPage = () => {
             <h4>{item.title}</h4>
             <p>{item.org}</p>
             <p>{item.date}</p>
-            {/* <div className="stack">
-              {item.stack.map((tech) => (
-                <img key={tech} src={techIcons[tech]} alt={tech} />
-              ))}
-            </div> */}
+            {item.skills && (
+              <div className="skills">
+                {item.skills.map((skill, index) => (
+                  <p key={index}>{skill}</p>
+                ))}
+              </div>
+            )}
           </div>
           
         </div>
