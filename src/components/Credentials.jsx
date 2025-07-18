@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 // > certificates
@@ -77,8 +76,6 @@ const Credentials = () => {
     { id: 1, name: "badge1", icon: `${seess}` },
     { id: 1, name: "badge1", icon: `${cloud}` },
   ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {

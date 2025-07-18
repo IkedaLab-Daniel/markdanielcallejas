@@ -109,7 +109,7 @@ const Contact = () => {
                             rel="noopener noreferrer" 
                             className={`social-card`}
                             data-aos="flip-down"
-                            data-aos-delay={index * 100}>
+                            >
                         <img 
                         src={link.img} 
                         alt={link.name}

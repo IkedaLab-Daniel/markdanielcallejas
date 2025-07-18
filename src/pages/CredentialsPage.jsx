@@ -1,6 +1,3 @@
-// > placehoders
-import cert1 from '../assets/metafrontend.jpeg';
-
 // > imgs - badges
 import badgefullstack from '../assets/badgefullstack.png'
 import badgefrontend from '../assets/badgefrontend.png'
