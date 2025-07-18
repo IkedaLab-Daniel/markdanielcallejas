@@ -24,6 +24,32 @@ import googleux from '../assets/googleux.jpeg'
 // > style
 import './CredentialsPage.css';
 
+// > CDN tech icons
+const skillIcons = {
+  HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  JS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  Node: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  Express: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  Django: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  "Django REST Framework": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  MySQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  SQLite: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+  TailwindCSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+  Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  Git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  GitHub: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+  Vite: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg",
+  Linux: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+  Postman: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+  NPM: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+  Bash: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+};
+
+
 const credentialsData = [
   {
     id: 4,
@@ -160,7 +186,7 @@ const credentialsData = [
     org: 'Coursera | Meta',
     date: 'Oct 2, 2024',
     image: metafrontend,
-    skills: ["React", "CSS"]
+    skills: ["React", "CSS", "JS", "Git", "GitHub"]
   },
   {
     id: 14,
@@ -209,13 +235,19 @@ const CredentialsPage = () => {
             <h4>{item.title}</h4>
             <p>{item.org}</p>
             <p>{item.date}</p>
-            {item.skills && (
-              <div className="skills">
-                {item.skills.map((skill, index) => (
-                  <p key={index}>{skill}</p>
-                ))}
-              </div>
-            )}
+              {item.skills && (
+                <div className="skills">
+                  {item.skills.map((skill, index) => (
+                    <span key={index} className="skill-icon" title={skill}>
+                      {skillIcons[skill] ? (
+                        <img src={skillIcons[skill]} alt={skill} style={{ width: 24, height: 24 }} />
+                      ) : (
+                        <span>{skill}</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+              )}
           </div>
           
         </div>
@@ -230,7 +262,7 @@ const CredentialsPage = () => {
 
       <h3 className="section-title">Badges</h3>
       {renderCards(badges, 'badge')}
-      <div className="link-wrapper" data-aos="fade-left">
+      <div className="link-wrapper" data-aos="fade-up">
         <a className='link-to-credly' href='https://www.credly.com/users/mark-daniel-callejas/' target='_blank'>Visit Official Credly Profile</a>
       </div>
       <h3 className="section-title">Certificates</h3>
