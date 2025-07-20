@@ -28,10 +28,12 @@ import metafrontend from '../assets/metafrontend.jpeg'
 import metabackend from '../assets/metabackend.jpeg'
 import googleux from '../assets/googleux.jpeg'
 import metafullstack from '../assets/metafullstack.jpeg'
+import dockeress from '../assets/docker-ess.jpg'
 
 // > img - platforms, providers
 import placeholder from '../assets/placeholder.jpeg'
 import coursera from '../assets/icon-coursera.png'
+import cognitiveclass from '../assets/cognitiveclass.png'
 
 // > style
 import './CredentialsPage.css';
@@ -253,17 +255,17 @@ const certificates = [
   },
   {
     id: 21,
-    title: "Machine Learning Specialization",
-    issuer: "Stanford University",
-    icon: placeholder,
-    platform: "Coursera",
-    dateEarned: "December 2024",
-    credentialId: "COURSERA-ML-2024-001234",
-    verificationUrl: "https://coursera.org/verify/specialization/001234",
-    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
-    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-    instructor: "Andrew Ng",
-    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+    title: "Docker Essentials: A Developer Introduction",
+    issuer: "IBM Developer Skills Network",
+    icon: cognitiveclass,
+    platform: "Cognitive Class",
+    dateEarned: "July 2024",
+    credentialId: "",
+    verificationUrl: "https://courses.cognitiveclass.ai/certificates/a01e5cc6716b41c08beeb390791ac916",
+    skills: ["Containers", "Docker", "Docker Swarm", "Docker Images", "CI/CD workflows", "Container Orchestration", "High Availability", "Service Discovery"],
+    certificateImage: dockeress,
+    instructor: "",
+    description: "Covers container creation and management, Docker images, basic orchestration using Docker Swarm, CI/CD workflows, and running containers in production."
   }
 ]
 
