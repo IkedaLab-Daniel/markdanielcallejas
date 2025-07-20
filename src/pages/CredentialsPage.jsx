@@ -29,11 +29,15 @@ import metabackend from '../assets/metabackend.jpeg'
 import googleux from '../assets/googleux.jpeg'
 import metafullstack from '../assets/metafullstack.jpeg'
 import dockeress from '../assets/docker-ess.jpg'
+import reduxfundamentals from '../assets/redux-fundamentals.jpg'
+import reduxfundamentalsdark from '../assets/redux-fundamentals-dark.jpg'
+
 
 // > img - platforms, providers
 import placeholder from '../assets/placeholder.jpeg'
 import coursera from '../assets/icon-coursera.png'
 import cognitiveclass from '../assets/cognitiveclass.png'
+import frontendmasters from '../assets/frontendmasters.png'
 
 // > style
 import './CredentialsPage.css';
@@ -266,6 +270,20 @@ const certificates = [
     certificateImage: dockeress,
     instructor: "",
     description: "Covers container creation and management, Docker images, basic orchestration using Docker Swarm, CI/CD workflows, and running containers in production."
+  },
+  {
+    id: 22,
+    title: "Redux Fundamentals",
+    issuer: "Frontend Masters",
+    icon: frontendmasters,
+    platform: "Frontend Masters",
+    dateEarned: "July 2024",
+    credentialId: "",
+    verificationUrl: "",
+    skills: ["Redux core API", "React-Redux integration", "State management", "Middleware & enhancers", "Redux Toolkit", "Async thunks"],
+    certificateImage: reduxfundamentalsdark,
+    instructor: "",
+    description: "An in-depth ~4.5 hour developer-focused course on Redux—starting from pure Redux fundamentals, then integrating it into React, and extending it with ecosystem tools like Reselect, Immer, and Redux Toolkit. Ideal for building scalable, production-ready state management in mid-to-large React apps."
   }
 ]
 

@@ -10,7 +10,7 @@ const stats = [
     icon: <img src={certificategif} alt="Certificate" className='card-gif' />,
     number: 99,
     label: 'Certificates',
-    to: '/credentials',
+    to: '/credentials#certificates',
   },
   {
     icon: <img src={badgegif} alt="Badge" className='card-gif' />,
