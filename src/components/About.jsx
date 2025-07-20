@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import certificategif from '../assets/certificate.gif'
 import badgegif from '../assets/badge.gif'
 import projectsgif from '../assets/projects.gif'
@@ -8,16 +10,19 @@ const stats = [
     icon: <img src={certificategif} alt="Certificate" className='card-gif' />,
     number: 99,
     label: 'Certificates',
+    to: '/credentials',
   },
   {
     icon: <img src={badgegif} alt="Badge" className='card-gif' />,
     number: 20,
     label: 'Badges',
+    to: '/credentials',
   },
   {
     icon: <img src={projectsgif} alt="Projects" className='card-gif' />,
     number: 50,
     label: 'Projects',
+    to: '/projects',
   },
 ];
 
@@ -37,7 +42,11 @@ const About = () => {
                             <span className="stat-number">{stat.number}</span>
                             <span className="stat-label">{stat.label}</span>
                         </div>
-                    <button className="view-button">view</button>
+
+                      <Link to={stat.to}>
+                        <button className="view-button">view</button>
+                      </Link>
+                    
                 </div>
             ))}
         </div>
