@@ -27,6 +27,7 @@ import placeholder_ls from '../assets/placeholder-ls.jpg'
 import metafrontend from '../assets/metafrontend.jpeg'
 import metabackend from '../assets/metabackend.jpeg'
 import googleux from '../assets/googleux.jpeg'
+import metafullstack from '../assets/metafullstack.jpeg'
 
 // > img - platforms, providers
 import placeholder from '../assets/placeholder.jpeg'
@@ -238,17 +239,17 @@ const certificates = [
   },
   {
     id: 20,
-    title: "Machine Learning Specialization",
-    issuer: "Stanford University",
-    icon: placeholder,
+    title: "Meta Full-Stack Developer",
+    issuer: "META",
+    icon: coursera,
     platform: "Coursera",
-    dateEarned: "December 2024",
-    credentialId: "COURSERA-ML-2024-001234",
-    verificationUrl: "https://coursera.org/verify/specialization/001234",
-    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
-    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
-    instructor: "Andrew Ng",
-    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+    dateEarned: "July 2025",
+    credentialId: "",
+    verificationUrl: "https://coursera.org/share/23accd09363fb1a10da6f1d2ee533d20",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Python", "Django", "REST APIs", "SQL", "Git", "GitHub", "Debugging", "Unit Testing", "Responsive Design", "Cloud Hosting Basics", "Technical Interview Prep"],
+    certificateImage: metafullstack,
+    instructor: "",
+    description: "Awarded after completing both the Front‑End and Back‑End Developer Professional Certificates—a combined full‑stack program designed to prepare learners for entry‑level full‑stack roles. Courses include HTML/CSS, JavaScript, React, Python, APIs, Django, and databases, culminating in capstone projects applying both front‑end and back‑end skills."
   },
   {
     id: 21,
