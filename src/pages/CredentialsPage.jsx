@@ -210,20 +210,34 @@ const certificates = [
   },
   {
     id: 18,
-    title: "Machine Learning Specialization",
-    issuer: "Stanford University",
-    icon: placeholder,
+    title: "Google UX Design",
+    issuer: "Google",
+    icon: coursera,
     platform: "Coursera",
-    dateEarned: "December 2024",
-    credentialId: "COURSERA-ML-2024-001234",
-    verificationUrl: "https://coursera.org/verify/specialization/001234",
-    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
-    certificateImage: placeholder_ls,
+    dateEarned: "April 2025",
+    credentialId: "",
+    verificationUrl: "https://coursera.org/share/d808401e214984822f5dabe51f543b12",
+    skills: ["UX Research", "Usability Test", "Figma", "Wireframing", "Prototyping", "Mockups", "Design Principles"],
+    certificateImage: googleux,
     instructor: "Andrew Ng",
-    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+    description: "This beginner-friendly 7‑course online certificate by Google (via Coursera) leads students through the complete UX design process—from empathizing with users and defining pain points to ideating, wireframing, prototyping, testing, and iterating designs."
   },
   {
     id: 19,
+    title: "Meta Back-End Developer",
+    issuer: "META",
+    icon: coursera,
+    platform: "Coursera",
+    dateEarned: "April 2025",
+    credentialId: "",
+    verificationUrl: "https://coursera.org/share/cd08b51edb1470f7d4d839926f0f7729",
+    skills: ["Python", "Git", "GitHub", "MySQL", "Django", "REST APIs", "Debugging", "Unit Testing"],
+    certificateImage: metabackend,
+    instructor: "",
+    description: "A 9-course professional certificate focused on server-side development using Python and Django. Covered database management with SQL, RESTful API design, Git-based version control, and cloud deployment fundamentals. Completed a capstone full-stack project and algorithm-based coding interview prep."
+  },
+  {
+    id: 20,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
     icon: placeholder,
@@ -237,7 +251,7 @@ const certificates = [
     description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
   },
   {
-    id: 20,
+    id: 21,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
     icon: placeholder,
