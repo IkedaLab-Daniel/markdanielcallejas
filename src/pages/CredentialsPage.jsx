@@ -289,12 +289,17 @@ const certificates = [
 
 const CredentialsPage = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [selectedBadge, setSelectedBadge] = useState(null);
 
   const renderBadgeCards = (items) => (
     <div className="grid badge">
       {items.map((item) => (
-        <div className="card" key={item.id} data-aos="fade-up">
-          <img src={item.image} alt={item.title} />
+        <div className="card" key={item.id} data-aos="fade-up" onClick={() => setSelectedBadge(item)}>
+          <img
+            src={item.image}
+            alt={item.title}
+            style={{ cursor: 'pointer' }}
+          />
           <div className="info-wrapper">
             <h4>{item.title}</h4>
             <p>{item.org}</p>
@@ -431,6 +436,46 @@ const CredentialsPage = () => {
     );
   };
 
+
+  const renderBadgeModal = () => {
+    if (!selectedBadge) return null;
+    const item = selectedBadge;
+    return (
+      <div
+        className="modal-overlay"
+        onClick={() => setSelectedBadge(null)}
+      >
+        <div
+          className="modal-content"
+          onClick={e => e.stopPropagation()}
+        >
+          <button
+            onClick={() => setSelectedBadge(null)}
+            aria-label="Close"
+          >
+            ×
+          </button>
+          <img
+            src={item.image}
+            alt={item.title}
+            style={{
+              width: '50%',
+              borderRadius: 8,
+              marginBottom: 16,
+              border: '1px solid #eee'
+            }}
+          />
+          <div style={{ textAlign: 'center' }}>
+            <h3 style={{ margin: '8px 0 4px 0' }}>{item.title}</h3>
+            <p style={{ margin: 0, color: '#666', fontWeight: 500 }}>{item.org}</p>
+            <p style={{ margin: '8px 0', color: '#888', fontSize: '0.95em' }}>{item.date}</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+
   // const renderCards = (items, type) => (
   //   <div className={`grid ${type}`}>
   //     {items.map((item) => (
@@ -484,6 +529,7 @@ const CredentialsPage = () => {
       <h3 className="section-title" data-aos="fade-up">Certificates</h3>
       {renderCertificateCards(certificates)}
       {renderModal()}
+      {renderBadgeModal()}
       <Footer />
     </section>
   );
