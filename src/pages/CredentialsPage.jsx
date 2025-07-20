@@ -293,7 +293,7 @@ const CredentialsPage = () => {
   const renderBadgeCards = (items) => (
     <div className="grid badge">
       {items.map((item) => (
-        <div className="card" key={item.id} data-aos="flip-up">
+        <div className="card" key={item.id} data-aos="fade-up">
           <img src={item.image} alt={item.title} />
           <div className="info-wrapper">
             <h4>{item.title}</h4>
@@ -308,7 +308,7 @@ const CredentialsPage = () => {
   const renderCertificateCards = (items) => (
     <div className="flex certificate">
       {items.map((item) => (
-        <div className="card" key={item.id} data-aos="flip-up">
+        <div className="card" key={item.id} data-aos="fade-up">
           <div className="top">
             <div className="left">
               <img src={item.icon} alt="" className="course-icon" />
@@ -353,10 +353,13 @@ const CredentialsPage = () => {
             </div>
             <p className="date">{item.dateEarned}</p>
             
-            <a href={item.verificationUrl} className="verify" target='_blank'>
-              Verify
-              <SquareArrowOutUpRight />
-            </a>
+            {item.verificationUrl && (
+              <a href={item.verificationUrl} className="verify" target='_blank'>
+                Verify
+                <SquareArrowOutUpRight />
+              </a>
+            )}
+            
           </div>
         </div>
       ))}
@@ -369,42 +372,14 @@ const CredentialsPage = () => {
     return (
       <div
         className="modal-overlay"
-        style={{
-          position: 'fixed',
-          top: 0, left: 0, right: 0, bottom: 0,
-          background: 'rgba(0,0,0,0.65)',
-          zIndex: 1000,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
-        }}
         onClick={() => setSelectedCertificate(null)}
       >
         <div
           className="modal-content"
-          style={{
-            background: '#fff',
-            borderRadius: 12,
-            maxWidth: 480,
-            width: '90%',
-            padding: 24,
-            boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
-            position: 'relative'
-          }}
           onClick={e => e.stopPropagation()}
         >
           <button
             onClick={() => setSelectedCertificate(null)}
-            style={{
-              position: 'absolute',
-              top: 12,
-              right: 16,
-              background: 'none',
-              border: 'none',
-              fontSize: 28,
-              color: '#888',
-              cursor: 'pointer'
-            }}
             aria-label="Close"
           >
             ×
@@ -412,13 +387,6 @@ const CredentialsPage = () => {
           <img
             src={item.certificateImage}
             alt={item.title}
-            style={{
-              width: '90%',
-              borderRadius: 8,
-              marginBottom: 16,
-              border: '1px solid #eee',
-              margin: "auto",
-            }}
           />
           <div style={{ textAlign: 'center' }}>
             {/* <h3 style={{ margin: '8px 0 4px 0' }}>{item.title}</h3> */}
@@ -495,7 +463,7 @@ const CredentialsPage = () => {
   return (
     <section className="credentials" id="credentials-page">
       <Link to="/">
-        <div className="back-modal" data-aos="fade-up">
+        <div className="back-modal">
           <House size={17}/>
             <p>Back Home</p>
         </div>
@@ -513,7 +481,7 @@ const CredentialsPage = () => {
       <div className="link-wrapper" data-aos="fade-up">
         <a className='link-to-credly' href='https://www.credly.com/users/mark-daniel-callejas/' target='_blank'>Visit Official Credly Profile</a>
       </div>
-      <h3 className="section-title">Certificates</h3>
+      <h3 className="section-title" data-aos="fade-up">Certificates</h3>
       {renderCertificateCards(certificates)}
       {renderModal()}
       <Footer />
