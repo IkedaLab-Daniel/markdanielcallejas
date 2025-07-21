@@ -17,6 +17,7 @@ import seess from '../assets/seess.png'
 import cloud from '../assets/cloud.png'
 
 // > img - certificates
+import placeholder_ls from '../assets/placeholder-ls.jpg'
 import metafrontend from '../assets/metafrontend.jpeg'
 import metabackend from '../assets/metabackend.jpeg'
 import googleux from '../assets/googleux.jpeg'
@@ -196,7 +197,7 @@ const certificates = [
     credentialId: "COURSERA-ML-2024-001234",
     verificationUrl: "https://coursera.org/verify/specialization/001234",
     skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
-    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    certificateImage: placeholder_ls,
     instructor: "Andrew Ng",
     description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
   },
@@ -210,7 +211,7 @@ const certificates = [
     credentialId: "COURSERA-ML-2024-001234",
     verificationUrl: "https://coursera.org/verify/specialization/001234",
     skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
-    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    certificateImage: placeholder_ls,
     instructor: "Andrew Ng",
     description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
   },
@@ -274,7 +275,11 @@ const CredentialsPage = () => {
               <p className="platform">Platform</p>
             </div>
           </div>
-          <img src={item.image} alt={item.title} />
+
+          <div className="cert-img-container">
+            <img src={item.certificateImage} alt={item.title} />
+            <p>Click to view!</p>
+          </div>
           <div className="info-wrapper">
             <h4>{item.title}</h4>
             <p>{item.org}</p>
