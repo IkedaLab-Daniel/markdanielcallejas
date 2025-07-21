@@ -1,5 +1,5 @@
 // > lucide icons
-import { CircleCheck } from 'lucide-react'
+import { CircleCheck, Calendar } from 'lucide-react'
 
 // > imgs - badges
 import badgefullstack from '../assets/badgefullstack.png'
@@ -301,6 +301,12 @@ const CredentialsPage = () => {
                 ))}
               </div>
             )}
+
+            <div className="icon-text below">
+              <Calendar />
+              <p>Date earned:</p>
+            </div>
+            <p className="date">{item.dateEarned}</p>
             
           </div>
         </div>
