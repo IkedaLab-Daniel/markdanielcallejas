@@ -17,9 +17,14 @@ import seess from '../assets/seess.png'
 import cloud from '../assets/cloud.png'
 
 // > img - certificates
+import placeholder_ls from '../assets/placeholder-ls.jpg'
 import metafrontend from '../assets/metafrontend.jpeg'
 import metabackend from '../assets/metabackend.jpeg'
 import googleux from '../assets/googleux.jpeg'
+
+// > img - platforms, providers
+import placeholder from '../assets/placeholder.jpeg'
+import coursera from '../assets/icon-coursera.png'
 
 // > style
 import './CredentialsPage.css';
@@ -50,7 +55,7 @@ const skillIcons = {
 };
 
 
-const credentialsData = [
+const badges = [
   {
     id: 4,
     type: 'badge',
@@ -178,57 +183,71 @@ const credentialsData = [
     org: 'Coursera',
     date: 'Mar 24, 2024',
     image: cloud,
-  },
-  {
-    id: 13,
-    type: 'certificate',
-    title: 'Meta Front-End Developer Certificate',
-    org: 'Coursera | Meta',
-    date: 'Oct 2, 2024',
-    image: metafrontend,
-    skills: ["React", "CSS", "JS", "Git", "GitHub"]
-  },
-  {
-    id: 14,
-    type: 'certificate',
-    title: 'Meta Back-End Developer Certificate',
-    org: 'Coursera | Meta',
-    date: 'Apr. 14, 2025',
-    image: metabackend,
-    skills: ["Python", "Django", "SQLite", "MySQL"]
-  },
-  {
-    id: 15,
-    type: 'certificate',
-    title: 'Google UX Design',
-    org: 'Coursera | Google',
-    date: 'April 12, 2024',
-    image: googleux,
-  },
-  {
-    id: 14,
-    type: 'certificate',
-    title: 'Meta Back-End Developer Certificate',
-    org: 'Coursera | Meta',
-    date: 'Apr. 14, 2025',
-    image: metabackend,
-  },
-  {
-    id: 15,
-    type: 'certificate',
-    title: 'Google UX Design',
-    org: 'Coursera | Google',
-    date: 'April 12, 2024',
-    image: googleux,
   }
 ];
 
-const CredentialsPage = () => {
-  const badges = credentialsData.filter(item => item.type === 'badge');
-  const certificates = credentialsData.filter(item => item.type === 'certificate');
+const certificates = [
+  {
+    id: 1,
+    title: "Machine Learning Specialization",
+    issuer: "Stanford University",
+    icon: coursera,
+    platform: "Coursera",
+    dateEarned: "December 2024",
+    credentialId: "COURSERA-ML-2024-001234",
+    verificationUrl: "https://coursera.org/verify/specialization/001234",
+    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
+    certificateImage: placeholder_ls,
+    instructor: "Andrew Ng",
+    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+  },
+  {
+    id: 2,
+    title: "Machine Learning Specialization",
+    issuer: "Stanford University",
+    icon: coursera,
+    platform: "Coursera",
+    dateEarned: "December 2024",
+    credentialId: "COURSERA-ML-2024-001234",
+    verificationUrl: "https://coursera.org/verify/specialization/001234",
+    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
+    certificateImage: placeholder_ls,
+    instructor: "Andrew Ng",
+    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+  },
+  {
+    id: 1,
+    title: "Machine Learning Specialization",
+    issuer: "Stanford University",
+    icon: coursera,
+    platform: "Coursera",
+    dateEarned: "December 2024",
+    credentialId: "COURSERA-ML-2024-001234",
+    verificationUrl: "https://coursera.org/verify/specialization/001234",
+    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
+    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    instructor: "Andrew Ng",
+    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+  },
+  {
+    id: 2,
+    title: "Machine Learning Specialization",
+    issuer: "Stanford University",
+    icon: coursera,
+    platform: "Coursera",
+    dateEarned: "December 2024",
+    credentialId: "COURSERA-ML-2024-001234",
+    verificationUrl: "https://coursera.org/verify/specialization/001234",
+    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
+    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    instructor: "Andrew Ng",
+    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+  }
+]
 
-  const renderCards = (items, type) => (
-    <div className={`grid ${type}`}>
+const CredentialsPage = () => {
+  const renderBadgeCards = (items) => (
+    <div className="grid badge">
       {items.map((item) => (
         <div className="card" key={item.id} data-aos="flip-up">
           <img src={item.image} alt={item.title} />
@@ -236,25 +255,78 @@ const CredentialsPage = () => {
             <h4>{item.title}</h4>
             <p>{item.org}</p>
             <p>{item.date}</p>
-              {item.skills && (
-                <div className="skills">
-                  {item.skills.map((skill, index) => (
-                    <span key={index} className="skill-icon" title={skill}>
-                      {skillIcons[skill] ? (
-                        <img src={skillIcons[skill]} alt={skill} />
-                      ) : (
-                        <span>{skill}</span>
-                      )}
-                    </span>
-                  ))}
-                </div>
-              )}
           </div>
-          
         </div>
       ))}
     </div>
   );
+
+  const renderCertificateCards = (items) => (
+    <div className="flex certificate">
+      {items.map((item) => (
+        <div className="card" key={item.id} data-aos="flip-up">
+          <div className="top">
+            <div className="left">
+              <img src={item.icon} alt="" className="course-icon" />
+            </div>
+            <div className="right">
+              <p className="title">Certificate here</p>
+              <p className="provider">Provider</p>
+              <p className="platform">Platform</p>
+            </div>
+          </div>
+
+          <div className="cert-img-container">
+            <img src={item.certificateImage} alt={item.title} />
+            <p>Click to view!</p>
+          </div>
+          <div className="info-wrapper">
+            <h4>{item.title}</h4>
+            <p>{item.org}</p>
+            <p>{item.date}</p>
+            {item.skills && (
+              <div className="skills">
+                {item.skills.map((skill, index) => (
+                  <span key={index} className="skill-icon" title={skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
+  // const renderCards = (items, type) => (
+  //   <div className={`grid ${type}`}>
+  //     {items.map((item) => (
+  //       <div className="card" key={item.id} data-aos="flip-up">
+  //         <img src={item.image} alt={item.title} />
+  //         <div className="info-wrapper">
+  //           <h4>{item.title}</h4>
+  //           <p>{item.org}</p>
+  //           <p>{item.date}</p>
+  //             {item.skills && (
+  //               <div className="skills">
+  //                 {item.skills.map((skill, index) => (
+  //                   <span key={index} className="skill-icon" title={skill}>
+  //                     {skillIcons[skill] ? (
+  //                       <img src={skillIcons[skill]} alt={skill} />
+  //                     ) : (
+  //                       <span>{skill}</span>
+  //                     )}
+  //                   </span>
+  //                 ))}
+  //               </div>
+  //             )}
+  //         </div>
+          
+  //       </div>
+  //     ))}
+  //   </div>
+  // );
 
   return (
     <section className="credentials" id="credentials-page">
@@ -262,12 +334,12 @@ const CredentialsPage = () => {
       <p>These are some of my achievements and recognitions.</p>
 
       <h3 className="section-title">Badges</h3>
-      {renderCards(badges, 'badge')}
+      {renderBadgeCards(badges)}
       <div className="link-wrapper" data-aos="fade-up">
         <a className='link-to-credly' href='https://www.credly.com/users/mark-daniel-callejas/' target='_blank'>Visit Official Credly Profile</a>
       </div>
       <h3 className="section-title">Certificates</h3>
-      {renderCards(certificates, 'certificate')}
+      {renderCertificateCards(certificates)}
     </section>
   );
 };
