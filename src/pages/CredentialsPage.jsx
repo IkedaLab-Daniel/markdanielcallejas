@@ -1,3 +1,6 @@
+// > lucide icons
+import { CircleCheck } from 'lucide-react'
+
 // > imgs - badges
 import badgefullstack from '../assets/badgefullstack.png'
 import badgefrontend from '../assets/badgefrontend.png'
@@ -28,6 +31,7 @@ import coursera from '../assets/icon-coursera.png'
 
 // > style
 import './CredentialsPage.css';
+import { CheckCircle } from 'lucide-react'
 
 // > CDN tech icons
 const skillIcons = {
@@ -191,12 +195,12 @@ const certificates = [
     id: 1,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
-    icon: coursera,
+    icon: placeholder,
     platform: "Coursera",
     dateEarned: "December 2024",
     credentialId: "COURSERA-ML-2024-001234",
     verificationUrl: "https://coursera.org/verify/specialization/001234",
-    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
+    skills: ["Python", "Neural Networks", "TensorFlow", "Learning"],
     certificateImage: placeholder_ls,
     instructor: "Andrew Ng",
     description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
@@ -205,7 +209,7 @@ const certificates = [
     id: 2,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
-    icon: coursera,
+    icon: placeholder,
     platform: "Coursera",
     dateEarned: "December 2024",
     credentialId: "COURSERA-ML-2024-001234",
@@ -219,7 +223,7 @@ const certificates = [
     id: 1,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
-    icon: coursera,
+    icon: placeholder,
     platform: "Coursera",
     dateEarned: "December 2024",
     credentialId: "COURSERA-ML-2024-001234",
@@ -233,7 +237,7 @@ const certificates = [
     id: 2,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
-    icon: coursera,
+    icon: placeholder,
     platform: "Coursera",
     dateEarned: "December 2024",
     credentialId: "COURSERA-ML-2024-001234",
@@ -278,14 +282,18 @@ const CredentialsPage = () => {
 
           <div className="cert-img-container">
             <img src={item.certificateImage} alt={item.title} />
-            <p>Click to view!</p>
           </div>
-          <div className="info-wrapper">
-            <h4>{item.title}</h4>
-            <p>{item.org}</p>
-            <p>{item.date}</p>
+
+          <div className="info-container">
+            <p className='description'>{item.description}</p>
+
+            <div className="icon-text">
+              <CircleCheck />
+              <p>Skills gained:</p>
+            </div>
+
             {item.skills && (
-              <div className="skills">
+              <div className="skill-gain-wrapper">
                 {item.skills.map((skill, index) => (
                   <span key={index} className="skill-icon" title={skill}>
                     {skill}
@@ -293,6 +301,7 @@ const CredentialsPage = () => {
                 ))}
               </div>
             )}
+            
           </div>
         </div>
       ))}
