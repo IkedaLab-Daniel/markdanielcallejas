@@ -1,7 +1,8 @@
 import { useState } from 'react'
-
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 // > lucide icons
-import { CircleCheck, Calendar, SquareArrowOutUpRight } from 'lucide-react'
+import { CircleCheck, Calendar, SquareArrowOutUpRight, House } from 'lucide-react'
 
 // > imgs - badges
 import badgefullstack from '../assets/badgefullstack.png'
@@ -458,6 +459,17 @@ const CredentialsPage = () => {
 
   return (
     <section className="credentials" id="credentials-page">
+      <Link to="/">
+        <div className="back-modal" data-aos="fade-up">
+          <House size={17}/>
+            <p>Back Home</p>
+        </div>
+        <div className="back-modal-mobile">
+          <House size={17}/>
+          <p>Back</p>
+        </div>
+      </Link>
+
       <h2>Credentials</h2>
       <p>These are some of my achievements and recognitions.</p>
 
@@ -469,6 +481,7 @@ const CredentialsPage = () => {
       <h3 className="section-title">Certificates</h3>
       {renderCertificateCards(certificates)}
       {renderModal()}
+      <Footer />
     </section>
   );
 };
