@@ -34,7 +34,7 @@ const skillIcons = {
   Express: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   MongoDB: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   Django: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
-  "Django REST Framework": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  DRF: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
   PHP: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
   MySQL: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   SQLite: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
@@ -195,6 +195,7 @@ const credentialsData = [
     org: 'Coursera | Meta',
     date: 'Apr. 14, 2025',
     image: metabackend,
+    skills: ["Python", "Django", "SQLite", "MySQL"]
   },
   {
     id: 15,
@@ -240,7 +241,7 @@ const CredentialsPage = () => {
                   {item.skills.map((skill, index) => (
                     <span key={index} className="skill-icon" title={skill}>
                       {skillIcons[skill] ? (
-                        <img src={skillIcons[skill]} alt={skill} style={{ width: 24, height: 24 }} />
+                        <img src={skillIcons[skill]} alt={skill} />
                       ) : (
                         <span>{skill}</span>
                       )}
