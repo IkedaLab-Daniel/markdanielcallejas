@@ -195,7 +195,7 @@ const certificates = [
     id: 1,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
-    icon: placeholder,
+    icon: coursera,
     platform: "Coursera",
     dateEarned: "December 2024",
     credentialId: "COURSERA-ML-2024-001234",
@@ -274,9 +274,9 @@ const CredentialsPage = () => {
               <img src={item.icon} alt="" className="course-icon" />
             </div>
             <div className="right">
-              <p className="title">Certificate here</p>
-              <p className="provider">Provider</p>
-              <p className="platform">Platform</p>
+              <p className="title">{item.title}</p>
+              <p className="provider">{item.issuer}</p>
+              <p className="platform">{item.platform}</p>
             </div>
           </div>
 
