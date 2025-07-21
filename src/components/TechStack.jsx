@@ -24,7 +24,7 @@ const TechStack = () => {
                             <span className="tech-name">HTML</span>
                         </li>
                         <li className='float-2'>
-                            <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS" /> CSS
+                            <img src="https://cdn.simpleicons.org/css?color=1572B6" alt="CSS" />CSS
                         </li>
                         <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" /> JavaScript
