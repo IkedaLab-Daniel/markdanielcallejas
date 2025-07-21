@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 // > lucide icons
 import { CircleCheck, Calendar, SquareArrowOutUpRight } from 'lucide-react'
 
@@ -61,7 +63,7 @@ const skillIcons = {
 
 const badges = [
   {
-    id: 4,
+    id: 1,
     type: 'badge',
     title: 'Meta Full-Stack Engineer Certificate',
     org: 'Coursera | META',
@@ -69,7 +71,7 @@ const badges = [
     image: badgefullstack,
   },
   {
-    id: 5,
+    id: 2,
     type: 'badge',
     title: 'Meta Front-End Developer Certificate',
     org: 'Coursera | META',
@@ -77,7 +79,7 @@ const badges = [
     image: badgefrontend,
   },
   {
-    id: 6,
+    id: 3,
     type: 'badge',
     title: 'Meta Back-End Developer Certificate',
     org: 'Coursera | META',
@@ -85,7 +87,7 @@ const badges = [
     image: badgebackend,
   },
   {
-    id: 7,
+    id: 4,
     type: 'badge',
     title: 'Google UX Design Professional Certificate',
     org: 'Coursera | Google',
@@ -93,7 +95,7 @@ const badges = [
     image: ux,
   },
   {
-    id: 1,
+    id: 5,
     type: 'badge',
     title: 'JavaScript Essentials 2',
     org: 'Cisco',
@@ -101,7 +103,7 @@ const badges = [
     image: js2,
   },
   {
-    id: 2,
+    id: 6,
     type: 'badge',
     title: 'JavaScript Essentials 1',
     org: 'Cisco',
@@ -109,7 +111,7 @@ const badges = [
     image: js1,
   },
   {
-    id: 3,
+    id: 7,
     type: 'badge',
     title: 'Introduction to Cybersecurity',
     org: 'Cisco',
@@ -117,7 +119,7 @@ const badges = [
     image: cybersec,
   },
   {
-    id: 4,
+    id: 8,
     type: 'badge',
     title: 'IT Essentials',
     org: 'Cisco',
@@ -125,7 +127,7 @@ const badges = [
     image: itess,
   },
   {
-    id: 5,
+    id: 9,
     type: 'badge',
     title: 'HTML Essentials',
     org: 'Cisco',
@@ -133,7 +135,7 @@ const badges = [
     image: badgehtml,
   },
   {
-    id: 6,
+    id: 10,
     type: 'badge',
     title: 'Node and Express Essentials',
     org: 'Coursera',
@@ -141,7 +143,7 @@ const badges = [
     image: nodeexpress,
   },
   {
-    id: 7,
+    id: 11,
     type: 'badge',
     title: 'JavaScript Programming Essentials',
     org: 'Coursera',
@@ -149,7 +151,7 @@ const badges = [
     image: jsibm,
   },
   {
-    id: 8,
+    id: 12,
     type: 'badge',
     title: 'Front-end Development with React V2',
     org: 'Coursera',
@@ -157,7 +159,7 @@ const badges = [
     image: frontendess,
   },
   {
-    id: 9,
+    id: 13,
     type: 'badge',
     title: 'Web Development with HTML, CSS, JavaScript Essentials',
     org: 'Coursera',
@@ -165,7 +167,7 @@ const badges = [
     image: webdev,
   },
   {
-    id: 10,
+    id: 14,
     type: 'badge',
     title: 'Git and GitHub Essentials',
     org: 'Coursera',
@@ -173,7 +175,7 @@ const badges = [
     image: gitess,
   },
   {
-    id: 11,
+    id: 15,
     type: 'badge',
     title: 'Software Engineering Essentials',
     org: 'Coursera',
@@ -181,7 +183,7 @@ const badges = [
     image: seess,
   },
   {
-    id: 12,
+    id: 16,
     type: 'badge',
     title: 'Introduction to Cloud Computing',
     org: 'Coursera',
@@ -192,7 +194,7 @@ const badges = [
 
 const certificates = [
   {
-    id: 1,
+    id: 17,
     title: "Meta Front-End Developer",
     issuer: "META",
     icon: coursera,
@@ -206,7 +208,7 @@ const certificates = [
     description: "A beginner-friendly, project-based training program designed by Meta and delivered on Coursera. It spans nine self-paced courses, and guides students from foundational web technologies to a portfolio-level capstone and coding interview prep."
   },
   {
-    id: 2,
+    id: 18,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
     icon: placeholder,
@@ -220,7 +222,7 @@ const certificates = [
     description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
   },
   {
-    id: 1,
+    id: 19,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
     icon: placeholder,
@@ -234,7 +236,7 @@ const certificates = [
     description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
   },
   {
-    id: 2,
+    id: 20,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
     icon: placeholder,
@@ -250,6 +252,8 @@ const certificates = [
 ]
 
 const CredentialsPage = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
   const renderBadgeCards = (items) => (
     <div className="grid badge">
       {items.map((item) => (
@@ -281,7 +285,12 @@ const CredentialsPage = () => {
           </div>
 
           <div className="cert-img-container">
-            <img src={item.certificateImage} alt={item.title} />
+            <img
+              src={item.certificateImage}
+              alt={item.title}
+              style={{ cursor: 'pointer' }}
+              onClick={() => setSelectedCertificate(item)}
+            />          
           </div>
 
           <div className="info-container">
@@ -317,6 +326,106 @@ const CredentialsPage = () => {
       ))}
     </div>
   );
+
+  const renderModal = () => {
+    if (!selectedCertificate) return null;
+    const item = selectedCertificate;
+    return (
+      <div
+        className="modal-overlay"
+        style={{
+          position: 'fixed',
+          top: 0, left: 0, right: 0, bottom: 0,
+          background: 'rgba(0,0,0,0.65)',
+          zIndex: 1000,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        onClick={() => setSelectedCertificate(null)}
+      >
+        <div
+          className="modal-content"
+          style={{
+            background: '#fff',
+            borderRadius: 12,
+            maxWidth: 480,
+            width: '90%',
+            padding: 24,
+            boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+            position: 'relative'
+          }}
+          onClick={e => e.stopPropagation()}
+        >
+          <button
+            onClick={() => setSelectedCertificate(null)}
+            style={{
+              position: 'absolute',
+              top: 12,
+              right: 16,
+              background: 'none',
+              border: 'none',
+              fontSize: 28,
+              color: '#888',
+              cursor: 'pointer'
+            }}
+            aria-label="Close"
+          >
+            ×
+          </button>
+          <img
+            src={item.certificateImage}
+            alt={item.title}
+            style={{
+              width: '90%',
+              borderRadius: 8,
+              marginBottom: 16,
+              border: '1px solid #eee',
+              margin: "auto",
+            }}
+          />
+          <div style={{ textAlign: 'center' }}>
+            {/* <h3 style={{ margin: '8px 0 4px 0' }}>{item.title}</h3> */}
+            <p style={{ margin: 0, color: '#666', fontWeight: 500 }}>{item.issuer} &middot; {item.platform}</p>
+            <p style={{ margin: '8px 0', color: '#888', fontSize: '0.95em' }}>{item.dateEarned}</p>
+            {/* <p style={{ margin: '8px 0', color: '#444', fontSize: '0.9rem' }}>{item.description}</p> */}
+            {item.skills && (
+              <div style={{ margin: '12px 0', display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'center' }}>
+                {item.skills.map((skill, idx) => (
+                  <span key={idx} style={{
+                    background: '#f3f6fa',
+                    color: '#2563eb',
+                    borderRadius: 6,
+                    padding: '4px 10px',
+                    fontSize: '0.85em',
+                    border: '1px solid #dbeafe'
+                  }}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            )}
+            <a
+              href={item.verificationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 6,
+                color: '#2563eb',
+                fontWeight: 500,
+                textDecoration: 'none',
+                marginTop: 8
+              }}
+            >
+              Verify Certificate <SquareArrowOutUpRight size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   // const renderCards = (items, type) => (
   //   <div className={`grid ${type}`}>
@@ -359,6 +468,7 @@ const CredentialsPage = () => {
       </div>
       <h3 className="section-title">Certificates</h3>
       {renderCertificateCards(certificates)}
+      {renderModal()}
     </section>
   );
 };
