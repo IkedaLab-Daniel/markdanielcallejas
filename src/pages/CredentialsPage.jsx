@@ -1,5 +1,5 @@
 // > lucide icons
-import { CircleCheck, Calendar } from 'lucide-react'
+import { CircleCheck, Calendar, SquareArrowOutUpRight } from 'lucide-react'
 
 // > imgs - badges
 import badgefullstack from '../assets/badgefullstack.png'
@@ -308,6 +308,10 @@ const CredentialsPage = () => {
             </div>
             <p className="date">{item.dateEarned}</p>
             
+            <a href={item.verificationUrl} className="verify" target='_blank'>
+              Verify
+              <SquareArrowOutUpRight />
+            </a>
           </div>
         </div>
       ))}
