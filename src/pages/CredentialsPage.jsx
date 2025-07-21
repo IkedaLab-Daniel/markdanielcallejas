@@ -21,6 +21,10 @@ import metafrontend from '../assets/metafrontend.jpeg'
 import metabackend from '../assets/metabackend.jpeg'
 import googleux from '../assets/googleux.jpeg'
 
+// > img - platforms, providers
+import placeholder from '../assets/placeholder.jpeg'
+import coursera from '../assets/icon-coursera.png'
+
 // > style
 import './CredentialsPage.css';
 
@@ -186,6 +190,21 @@ const certificates = [
     id: 1,
     title: "Machine Learning Specialization",
     issuer: "Stanford University",
+    icon: placeholder,
+    platform: "Coursera",
+    dateEarned: "December 2024",
+    credentialId: "COURSERA-ML-2024-001234",
+    verificationUrl: "https://coursera.org/verify/specialization/001234",
+    skills: ["Machine Learning", "Python", "Neural Networks", "TensorFlow", "Supervised Learning", "Unsupervised Learning"],
+    certificateImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    instructor: "Andrew Ng",
+    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+  },
+  {
+    id: 1,
+    title: "Machine Learning Specialization",
+    issuer: "Stanford University",
+    icon: placeholder,
     platform: "Coursera",
     dateEarned: "December 2024",
     credentialId: "COURSERA-ML-2024-001234",
@@ -214,9 +233,19 @@ const CredentialsPage = () => {
   );
 
   const renderCertificateCards = (items) => (
-    <div className="grid certificate">
+    <div className="flex certificate">
       {items.map((item) => (
         <div className="card" key={item.id} data-aos="flip-up">
+          <div className="top">
+            <div className="left">
+              <img src={item.icon} alt="" className="course-icon" />
+            </div>
+            <div className="right">
+              <p className="title">Certificate here</p>
+              <p className="provider">Provider</p>
+              <p className="platform">Platform</p>
+            </div>
+          </div>
           <img src={item.image} alt={item.title} />
           <div className="info-wrapper">
             <h4>{item.title}</h4>
@@ -226,11 +255,7 @@ const CredentialsPage = () => {
               <div className="skills">
                 {item.skills.map((skill, index) => (
                   <span key={index} className="skill-icon" title={skill}>
-                    {skillIcons[skill] ? (
-                      <img src={skillIcons[skill]} alt={skill} />
-                    ) : (
-                      <span>{skill}</span>
-                    )}
+                    {skill}
                   </span>
                 ))}
               </div>
