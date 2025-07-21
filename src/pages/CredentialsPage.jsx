@@ -193,17 +193,17 @@ const badges = [
 const certificates = [
   {
     id: 1,
-    title: "Machine Learning Specialization",
-    issuer: "Stanford University",
+    title: "Meta Front-End Developer",
+    issuer: "META",
     icon: coursera,
     platform: "Coursera",
-    dateEarned: "December 2024",
-    credentialId: "COURSERA-ML-2024-001234",
-    verificationUrl: "https://coursera.org/verify/specialization/001234",
-    skills: ["Python", "Neural Networks", "TensorFlow", "Learning"],
-    certificateImage: placeholder_ls,
-    instructor: "Andrew Ng",
-    description: "Comprehensive specialization covering machine learning fundamentals and advanced techniques"
+    dateEarned: "October 2024",
+    credentialId: "",
+    verificationUrl: "https://coursera.org/share/6a6112589a37961242fb7e9c7ceb4eba",
+    skills: ["HTML", "CSS", "JavaScript (ES6+)", "React", "Git", "GitHub", "UI/UX", "Debugging", "Unit Testing"],
+    certificateImage: metafrontend,
+    instructor: "META Staffs",
+    description: "A beginner-friendly, project-based training program designed by Meta and delivered on Coursera. It spans nine self-paced courses, and guides students from foundational web technologies to a portfolio-level capstone and coding interview prep."
   },
   {
     id: 2,
