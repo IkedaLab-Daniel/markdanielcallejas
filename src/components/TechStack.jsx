@@ -2,6 +2,7 @@ import frontendgif from '../assets/frontend.gif'
 import backendgif from '../assets/backend.gif'
 import databasegif from '../assets/database.gif'
 import tools from '../assets/deployment.gif'
+
 const TechStack = () => {
 
     return(
@@ -32,7 +33,7 @@ const TechStack = () => {
                             <img src="https://cdn.simpleicons.org/react/61DAFB" alt="React" /> React
                         </li>
                         <li className='float-1'>
-                            <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootrap" /> Bootstrap
+                            <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" /> Bootstrap
                         </li>
                         <li className='float-2'>
                             <img src="https://cdn.simpleicons.org/redux/764ABC" alt="Redux" />Redux
@@ -58,8 +59,17 @@ const TechStack = () => {
                         <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/django/092E20" alt="Django" /> Django
                         </li>
+                         <li className='float-2'>
+                            <img src="https://cdn.simpleicons.org/flask/000000" alt="Flask" /> Flask
+                        </li>
+                        <li className='float-1'>
+                            <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" /> PHP
+                        </li>
                         <li className='float-2'>
-                            <img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP" />PHP
+                            <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" /> Docker
+                        </li>
+                        <li className='float-1'>
+                            <img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" /> Kubernetes
                         </li>
                     </ul>
                 </div>
@@ -80,7 +90,10 @@ const TechStack = () => {
                             <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" /> MySQL
                         </li>
                         <li className='float-1'>
-                            <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="MySQL" /> SQLite
+                            <img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQLite" /> SQLite
+                        </li>
+                        <li className='float-2'>
+                            <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" /> PostgreSQL
                         </li>
                     </ul>
                 </div>
@@ -113,7 +126,7 @@ const TechStack = () => {
                             <img src="https://cdn.simpleicons.org/jsonwebtokens/000000" alt="jsonwebtokens" /> JWT
                         </li>
                         <li className='float-2'>
-                            <img src="https://cdn.simpleicons.org/insomnia/4000BF" alt="insomnia" />Insomnia
+                            <img src="https://cdn.simpleicons.org/insomnia/4000BF" alt="Insomnia" /> Insomnia
                         </li>
                         <li className='float-1'>
                             <img src="https://cdn.simpleicons.org/netlify/00C7B7" alt="Netlify" /> Netlify
