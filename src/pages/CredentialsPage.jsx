@@ -31,6 +31,7 @@ import metafullstack from '../assets/metafullstack.jpeg'
 import dockeress from '../assets/docker-ess.jpg'
 import reduxfundamentals from '../assets/redux-fundamentals.jpg'
 import reduxfundamentalsdark from '../assets/redux-fundamentals-dark.jpg'
+import ibmfullstack from '../assets/ibmfullstack.jpeg'
 
 
 // > img - platforms, providers
@@ -201,6 +202,20 @@ const badges = [
 ];
 
 const certificates = [
+  {
+    id: 23,
+    title: "IBM Full Stack Software Developer",
+    issuer: "IBM",
+    icon: coursera,
+    platform: "Coursera",
+    dateEarned: "July 2024",
+    credentialId: "",
+    verificationUrl: "https://coursera.org/share/edf17efab684a6f3534370f0d99b4952",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Bootstrap", "Node.js", "Express", "Python", "Django", "SQL", "Docker", "Kubernetes", "OpenShift", "Microservices", "Serverless", "CI/CD", "Git", "GitHub", "Cloud Native", "DevOps", "Container Orchestration", "GenAI-Augmented Development"],
+    certificateImage: ibmfullstack,
+    instructor: "",
+    description: "A complete full-stack cloud-native development program comprised of 15 courses (including capstone), designed for beginners. Covers front-end, back-end, databases, containerization, microservices, serverless, CI/CD, DevOps, Git-based version control, and GenAI-enhanced development workflows. Includes multiple hands-on labs and real-world capstone projects."
+  },
   {
     id: 17,
     title: "Meta Front-End Developer",
